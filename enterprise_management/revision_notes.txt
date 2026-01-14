@@ -1,0 +1,277 @@
+================= Entrerprise Management Recall Revision Notes ============
+
+------  External Business Environment -----
+
+What are the two main parts of an environmental business scan?
+	Scanning the internal business environment is one part of the scan, and scanning the external business environment is the other.
+
+What is the structure of the market when creating a new company, there are three levels, the innermost being the company itself?
+	The market has three levels, the inner level is the companies own inner environment, the next level is the micor economic environment which includes the things external to the company, but innate to the sector/industry/location. Then the last level is the macroeconomic environment which governs the wider influence on the company such as the legal and political issues.
+
+What is a PESTEL analysis and what level of the market does it analyse?
+	A PESTEL analysis looks at a business venture by examining the Political, Economic, Social, Technological, Environmental and Legal elements. It analyses the external influences on a business opportunity.
+
+What is porters five forces used for (what level of analysis)?
+	Porters five forces are external forces that can impact the functioning of a new business venture. They are: Threat of new entrants, Threat of substitutes, Bargaining power of buyers, Bargaining power of suppliers, and Competitive rivalry.
+
+For each part of the PESTEL analysis give some examples of the issues that the sector gives:
+	Political - new political tension could create issues with supply chains, transporting products etc, tax issues and so on
+	Economic - if GDP is lower and people have less disposable income they are less inclined to spend
+	Social - if people are going out shopping less there is less places to display products, social behaviours such as not traveelling could impact aviation and tourism markets etc
+	Technological - new tech advancements could make some markets obsellete - e.g. less demand for cameras when phones have them built in. Rise in VR could lead to less demand for standalone video game consoles
+	Environmental - issues with transport due to weather, environmental restrictions on carbon emissions etc, weather issues for food growth markets etc
+	Legal - new laws about carbon emissions, minimum wages and so on can affect margins
+	
+
+------ Internal Business Environment (Industry analysis) -------
+
+What are the five of porters forces?
+	Threat of new entrants - new entrants could try and out price you, or introduce a new or similar product or service whose differential factors appeal more to customers.
+
+	Threat of substitutes - Customers may find substitute products more appealing, for example you could either have product for product swaps (like email instead of mail), need swaps (e.g. baby products - only needed for a few years), generic subs (e.g. going on holiday instead of buying a new guitar)
+
+	Competitive rivalry - price battles, lowers margins, high exit barriers
+
+	Power of buyers - when there are lots of suppliers, low cost of switching suppliers, buyers who buy in large batches - losing a buyer could be a big issue if this is the case
+
+	Power of suppliers - when there are few suppliers, high costs for switching suppliers, powerful brand suppliers - buyers may have no choice but to stay with the same supplier.
+
+What weighs up the other side of the scale in response to the five forces?
+	Attractiveness and profitability of the target market
+
+Are the forces independant?
+	No
+
+-------- Markets and Marketing ----------
+
+What is the definition of marketing?
+	Marketing is the management process for identifying, anticipating, and satisfying customer requirements profitably.
+
+What is the sole purpose of a business?
+	To generate and retain customers
+
+When do customers buy?
+	When their percieved value of the good or service is less than or equal to what they are willing to pay / it is worth more to them than the money in their pocket
+
+What are the 3 Ms from the entrepeneurs point of view?
+	Market demand - is it something people want?
+	Market structure - can you get an offering into the marketplace? Will people choose yours over the competition?
+	Margin - can you get it to the customer and still make a profit?
+
+What is meant by the marketing mix?
+	Tne mix betwen setting an appropriate price, placing it in a place people can see and buy it, and informing the target market via promotion
+
+What is meant by a brand?
+	An easily identified and remembered concept, name or logo. It is identifiable and should convey desirable attributes to the customer
+
+What are some factors which set apart the actual product from the augmented product?
+	The actual product is the bare, raw product being sold - i.e. th packaging, branding, quality, features and so on. The augmented product includes the service for the product - i.e. the delivery, customer service, warranty (bolt on stuff supporting the raw product)
+
+Try and list some of the factors of brand personality:
+	Excitement, sincerity, competence, sophistication, ruggedness
+	A brand can appeal to one of or a few of these - for exampl Peter Storm = rugged and competent
+	Louis Vuitton = sophistication and sincerity
+
+What are the Ps of marketing?
+	Product, Price, Promotion, Place, People, Processes, Physical evidence
+
+What is meant by market segmentation?
+	When a market is divided up into different target groups (segments) - geographically, economically, demographically etc
+
+What is targeting?
+	When you focues on a particular segment of the market
+
+------ Competitive Strategies --------
+
+What does cost leadership compete on?
+	Price - leading the cost means you are the cheapest supplier of a certain product or service
+
+What does differentiation compete on?
+	Competes on the quality
+
+What are the two extremes targeting can go to?
+	Narrow or broad
+
+What are the key features of cost leaderships?
+	Congruent organisational culture, sustained capital investment, clear view of the service level
+	The multi level approach to cost leadership:
+		First class processes or manufacturing
+		Low cost distribution
+		Low cost built into the product or service design
+
+What are the risks that come with the cost leadership strategy?
+	Customers could percieve your product or service to have poor quality, lower customer loyalty, and it can mask the needs for a product or service change
+
+What basis can you differentiare on, and what are the key features of differentiation strategies?
+	You can differentiate on brand, design, technology, or service
+	The key features of a differentiation strategy are:
+		Strong marketing, clear definition of the service level, willingness to invest, conruent organisational culture, ability to keep moving
+
+What are the risks that come with the differentation strategy?
+	Can become insufficient ot support a price difference - imitation can encode the differential
+
+What are the risks with focusing?
+	Product differences can narrow, market share gets to small, competitors could find sub markets to sub focus the focuser
+
+What do new entrepeneurs struggle with, and what is it better for them to focus on?
+	New entrepenuers struggle to compete on price and cannot offer a wide range - it is best to find a niche and sell to peoiple who are not price sensitive at first
+
+--------- Internal Analysis ---------
+
+What is the definition of strategic capability?
+	The ability to perform at the level required for success - the analysis of a companies strategic capabilities can enable the strengths and weaknesses to be identified
+
+What kinds of resources are there?
+	Physical, human, financial, intangible
+
+What is meant by leverage?
+	When new firms have fewer resources than established firms, lack success factors, pay more for resources, and work resources harder
+	
+What is meant by competencies?
+	What your resources can do and at what level.
+
+How do you identify competencies?
+	Using value chain analysis - desribes the seperate activities and analyses the activitiies in terms of efficiency, effecitveness and coordination.
+		
+What are the support activities in a Value Chain Analysis, and what are the primary activities?
+	Firm infrastructure, human resource management, tech development and procurment are the support activities
+	Inbound logistics, operations, outbound logistics, marketing and sales, + service are the primary activities
+
+What ways can an enterprise have competitive strength?
+	Brand
+	assets and core competencies
+	market share
+	financial resource
+	customer loyalty
+	production and distribution strength
+	innovation capacity
+
+In the Boston COnsulting Growth Share Matrix, what is meant by Stars, Question Marks, Cash Cows, and Dogs?
+	A cash cow has high market share and a low market growth rate
+	A dog has low market growth and low market share
+	A Star has high market share and high market growth
+	A question mark has low market share and high market growth rate
+
+What are limitations of the BCG matrix?
+	It is not easy to find market data all the time to determine market growth rates or sizes
+	Some industries are rapidly moving
+	Marke share is not always the same as profits
+
+What is a SWOT analysis?
+	Strengths (internal), weaknesses (internal), opportuinities (external) and threats (external)
+
+In what situations in the Ansoff's matrix would you do each of the following: Protect/Build, Product Development, Market Development, Diversification
+	
+	You would protect and build when you have an existing product that has an existing market
+	You would develop new products when you have an existing market for new products
+	You woudl develop the market when you have a product that needs a new market
+	You would diversify when there is a need for new products which dont have a market yet (new markets)
+
+------- Intellectual Property --------
+
+What are all of the things that intellectual property covers, and what is IP?
+	IP covers patents, trademarks, copyrights, designs, know hows, geographical indications and database rights
+
+	Why is IP important?
+		IP is important since it helpe protect you ideas and prevent ther people benefiting from your own intellectual creation
+		You can create a monopoly to a 3rd party to commercialisei t
+
+What is a patent?
+	A patent is a duration limited territorial monopoly granted in return for public disclosure of a new and innovative technical product, process, or combinations of known products
+
+	What are the criteria and boundaries for patentability?
+		Must be novelty meaning it is not found in any other document, innocative step meaning it should not be an ordinary ability practiced in the specific technology, capable of industrial application, not an excluded category
+
+	What should you do before a patent is granted?
+		Dont tell anyone about the patent (keep confidential) + no publications
+
+	What are the pros and cons of patents?
+		Protect from copying, commercial gain and assists partnerships, but it costs money time, must reveal you information and can lead to possible litigation
+
+What is a copyright, is it automatic?
+	Yes a copyright is automatic, it gives rights to the creator of a certain tyoe of material - it is not a registered form of protection, but is instead automatic as soon as the work is created.
+	Is copyright infringement a crime?
+		Yes
+
+What is a design?
+	A design regards the external appearance of a product and the features of its shape.
+	What must a design be to be registered?
+		The design must be new, never previously available and indivisual in character
+
+	How long are registered designs active for?
+		Periods of 5 years, up to 25 total
+
+What is a design right, is it weaker or stronger than a registered design?
+	A desig right is a non registered form of protection against copying - weaker than a design registration
+
+	What is the duration of a design right?
+		10 years
+	Is it a monopoly right?
+		Not a monopoly right
+
+What is a trade mark?
+	Words, signs, or graphics which distinguish a product or service, customers can identify the product or service easily
+
+	What is the most common thing that is trademarked?
+		Brand names
+
+What is know how?
+	A non registered and non protective business secret - info, knowledge or skill - can only be protected by confidentiality agreements
+
+What is database rights?
+	Protects collections of works or data - no register needed - lasts 15 years
+
+What are geographical indications? - e.g. champagne
+	Identify a good as originating in the territory of a member, or a region, where a given quality is inherent to the area - e.g. champagne
+
+-------- Sampling Research ---------
+
+What is meant by marketing research?
+	It links an organisation to its market by gathering information that enables a company to identify market driven opporunities
+
+What goes on the bottom, middle and top of the knowledge pyramid?
+	The bottom is the raw data, above that is the information gathered from the data, and at the top is the knowledge extracted from the information
+
+What is market research used for in the short and long term?
+	It is used for corporate planning for future demand forecasting, analysing competitors and analysing opportunities
+	It is used for market planning - analysing potential of new market areas, identifying + evaluating markets for products and new products for markets, sales forecasting
+	It is used for product planning - e.g. product and name tests, packaging testing
+	Promotional planning - e.g. message designs
+
+What is the customer challenge?
+	The customers tend to not behave as we expect, they dont know what they want next or are even aware of what they are doing
+
+What are the methods of primary data collection?
+	Observation, surveys or content analysis
+
+What are the types of research data?
+	Primary (gather yourself), secondary (already exists), qualitative and quantitative
+
+What are some sources of secondary data collection?
+	Libraries, websites, company annual reportsm financial information etc ...
+
+------- The Business Model -----
+
+What is a business model? And what two questions does a business model answer?
+	A business model is a method for doing business by which a venture can generate revenue. It answers two questions - who is the customer and what do they value?
+
+What is a value proposition?
+	The proposition of value to the customer by the company - description of the bundle of products and services that creat evalue for the specific customer segments
+
+What is a market segment?
+	A merket sement is to whom and what purpose is the product useful.
+
+What are the sections of Osterwalder's business model canvas?
+	Key partners, key activities, key resources, value proposition, customer relationships, channels, customer segments, cos structure, revenue streams
+
+What are the environment factors impacting the business model?
+	Industry forces, macro economic forces, market forces, driving trends
+
+What are the different types of business model and breifly describe each:
+	Resource dirven - originates form exiting infrastructure and partnerships to expand or transform the busines model
+	Offer driven - creates new value propositions
+	Customer driven - Based on customer needs
+	Finance driven - Driven by new revenue streams
+	Multiple epicentre driven - driven by multiple epicentres that casn have significant impact on multiple other building blocks
+
+

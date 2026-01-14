@@ -1,0 +1,271 @@
+================ Advanced Distributed Systems Revision Questions ==================
+
+======== PART 1 ==========
+
+----- Distributed Computing Overview ------
+What is the definition of a system?
+	A system is a collection of singular components which work together to provide functionality not possible by the units alone.
+
+What is the definition of a distributed system?
+	A distributed system is a system whose parts are spread apart physically, connected via networking. It appears to its users as a single coherent system. If a random computer you didn't even know about causes a fail in your system, then your working with distributed system.
+
+What are the 8 fallacies of distributed systems?
+	Latency is zero, transport cost is zero, the network is reliable, the network is homogeneous, bandwidth is infinite, there is only one admin, the network is secure, topology doesnt change
+
+How can you remedy each of the fallacies?
+	Latency is zero - use as few network calls as possible
+	The network is reliable - include redundancy and reliability aids into messages
+	Infinite bandwidth - use compression
+	Homogeneous - use standard technologies like XML, and interopability
+	Topology doesnt change - use abstract models
+	security - build with security in mind from day one
+
+What is the formula to compute data transfer time?
+	Data transfer time = latency + (message_size / bandwidth)
+
+What is latency and bandwidth?
+	Latency is th time taken from sending the message ot it being received, bandwidth is the amount of data that can be transferred over a fixed time period.
+
+------ Performance Modelling ------
+What is a model?
+	A model is an abstraction of a system capturing only its most important parts, to be used in analysing the systems behaviour in various circumstances.
+
+What are the two main approaches to performance modelling, and what do they entail?
+	The first approach is the analytical model in which formulations are used to estimate performance measures
+		For example the transaction time of a http request is given by:
+			time = RTT + time (request) + time (site processing) + time(reply)
+	The second is simulations whereby monte carlo simulations are ran to generate random inputs to the system, and the output/behaviour is monitored.
+	
+What is queueing theory, and what is Littles Law?
+	Queueing theory is when the system is seen as a queue of requests that need processing, and a constant output of requests tht have been processed. Littles law states that in a steady state, meanind the rate of arrival is the same as the rate of completion, the average number of customers is given by the arrival rate * the service time
+
+What are the performance targets?
+	response time, throughput, resource utilisation, energy consumption, cost minimisation, minimise number of failures 
+
+What is Amdahl's law in parallel communication?
+	The speed up is limited by a part of the program which is inherently sequential.
+	Amdahls law states that the running time (tp) of a program on P cpus has an inherently sequential part (1 - x), when running on one machine it runs in:
+	ts: tp = ts x (1-x + (x/P)) or max(critical path workload, total workload / P)
+
+------ Fault Tolerance ------
+What are the five types of failures in distributed system?
+	Arbitrary/byzantine failer - the systemn returns a completely unexpected result
+	Time failure - the system fails to provide a response within the valid time window
+	Response failure - the response is incorrect
+	Ommission failure - fails to respond at all
+	Crash - server halt
+
+What are the three types of redundancy?
+	Physical - having more nodes
+	Informational - including additional info like check digits
+	Time - sending messages multiple times
+	PIT
+
+What is the implications of Redundancy?
+	Redundancy adds cost in the need to keep the replicas consistent, but it increases availability
+
+What does CAP stand for?
+	Consistency, availability and partiton tolerance
+
+What is caching?
+	Storing a local copy of data that is regularly accessed to avoid having to waste time re requesting the same thing from the server.
+
+What is capacity planning?
+	Determening the capacity needed for the expected level of demand
+
+How do you calculate the probability of availability?
+	P = 1 - probaility that all replicas fail
+	probability that all replicas fail = p(1 fails) x p(1 fails) ....
+
+What are the two consistency protocols and how do they differ?
+	Strict consistency - any read willl always return the data from the most recently updated replica - gives an absolute time ordering of all shared addresses
+
+	Eventual consistency - the data on the replicas will eventually reach a consistent state, but may have periods of time where they are not. This has lower cost, but obvious negatives. Updates will eventually propagate essentially.
+
+------- Resource Management -------
+What are the three forms a resource can appear as?
+	Hardware, software, or data
+
+What is Grid Computing and why did it lead to the move to Cloud Computing?
+	Grid computing is a high performance computing models whereby the hardware or software proviudes dependable, consistent, pervasice and inexpensive access to high en computational endpoints
+
+	It gives resource sharing, coordinated problem solving, resource discovery, info collection, publishingm data management, process management, security, process and session recording and accounting. 
+
+	However grid computing has high overhead infrastructure and heavy middleware requirements -> cloud computing
+
+What is Cloud Computing, and what is elasticity?
+	Cloud computing provides on demand access to compute power, you only pay for what you use, and you dont own what you use. Resources are virtualised rather than being physically split. Elasticity means resources can be added on demand either horizontally or vertically. 
+
+What are the service models for cloud computing?
+	Platform as a service - environment for software development
+	Infrastructure as a service - raw computational resource to be used as an organisation pleases
+	Software as a service - fully functional software available over the cloud
+
+What is the goal of cloud providers, and cloud consumers?
+	Cloud providers want to maximise profit and minimise cost, their job is to provision resources int he best way possible with the smallest waste.
+	Cloud providers want to get the most resource for the smallest cost and as quickly as possible
+
+What is meant by the bag of tasks problem, and when would it not work as a model?
+	Bag of tasks is the problem whereby tasks need to be allocated to machines, may not work as a model when their are task dependencies.
+
+What is the formula for calculaitng the priority of a task?
+	priority = avg(exec time) + max(priority of children) + communication cost
+
+What is Fog computing, and what is Edge computing?
+	Fog computing is when some data collection/computation is done in layers between the request sender and the server 
+	Edge computing does some cmoputing at the edge / source of the data before it is sent
+
+		Both reduce the load on cloud servers
+
+========= PART 2 ===========
+
+----- Big Data ------
+What is enterprise data?
+	Enterprise data is the operational data that an enterprise is represented by, ocvering mainstream tasks and analysis
+
+What is a distributed database management system?
+	A distributed database management system is a database management system where the data is stored in several databases, can be queried from several places, and provides distributed transactions via two phase commit. Global schema can be built from applying views to local schemas
+
+What architecture is most commonly used for parallel databases?
+	A shared nothing is often used. This measn that each replica shares nothing - i.e. no sahred memory, storage, processor etc
+
+What is data integration?
+	When data is combined from existing sources in a way that reduces heterogeneties.
+
+What is batch, interactive and stream processing?
+	Batch processing is the offline processing of large datasets so that they can be analysed
+	Interactive processing is online processing of customer requests
+	Stream processing processes data that arrives at speed in real time
+
+What are the 4 Vs of big data?
+	Velocity, volume, veracity, variety
+
+What are the three main challenges for distributed data?
+	Reliability, scalability, maintainability
+
+What is partitioning and replication?
+	Partitioning is when data is spread across multiple machines -> parallel processing
+	Replication is when data is stored in copies on various machines -> scalability and availability
+
+----- Partitioning ------
+What are the three main ways partitioning is completed?
+	Random or round robin
+	Key range - ranges of keys are sent to each node
+	Hashing - partitioning by hashes on the key
+
+What is skew and what are hot spots?
+	Skew is when data is unevenly partitioned
+	A hot spot is when the majority of data is partitioned to one location more than others (load is unevenly balanced)
+
+What is meant by repartitioning?
+	When data is moved from one partition to another
+
+Assuming uniform distr and mod partitioning, what is the fraction if data needing repartitioning given by?
+	1 - 1/final nodes
+
+What is one way to reduce the cost of repartitioning?
+	Use the hash(key) gives the partition number instead of the raw node number, then store a lookup table of partitions to nodes.
+
+What is a secondary index?
+	An index on an attribute which is not used for partitioning - can be local or global, and provide different access to a data source to avoid having to scan it entirely
+
+------ Map Reduce -----
+What is Map Reduce, and explain the map and reduce parts?
+	Map reduce is a programming paradigm for batch applications. Map takes a collection of key value pairs and returns new key value pairs, often summarising the input ones into collections of similar keys. Reduce takes these key value pairs from the map, and returns a new collection of key value pairs, where a function has been applied to the values - for example a sum of each word (word count).
+
+What is ACID?
+	Atomicity, consistency, isolation, durability
+
+What is a job, split and task?
+	A job is a unit of work
+	A split is a portion of an input
+	A task is a single run of a split - map or reduce
+
+What is a summarization pattern, combiner, filtering pattern, and inverted index pattern?
+	A summarization pattern is a reducer ran locally before the reduce function to send less data from mappers to reducers
+	A combiner is an optional reducer that is local to the map and can summarise the result in some way
+	A filtering pattern discards some of maps output
+	A join pattern implements a relational join
+	An inverted index supports the constructtion of an index from the contents of a document to a document
+
+------ NoSQL ------
+What are the two main needs that NoSQL accomodates?
+	Scalability (elastic) and simple operations
+
+What are the 6 characteristics of NoSQL?
+	Horizontally scale throughput
+	Replicate and distribute data
+	Expose a simple call level interface
+	Less strict transactional gauruntees
+	Uses distributed indexes efficiently for repliation rich, elastic provision of data storage
+	Copes with variation in structure of stored objects
+
+What are the 3 main types of NoSQL databases?
+	Key value - access and updates a value given a key
+	Document - access and updates a document by a key, the database provides functionality for accesing the value
+	Wide column - access and updates a collection of column families associated with a key
+
+What are the stonebraker cattel rules (there are 10)?
+	High level languages are good
+	Look for shared nothing
+	Open source gives you more control over the future
+	Dont try and implement ACID yourself, find a DB that does what you need for you
+	Pay attention to singular node performance
+	Carefully leverage main mamory
+	High availability and automatic recovery are essential
+	Avoid multi node operations
+	Online everything
+	Look for administrative simplicity
+
+------ Replication -----
+What do centralised transactions use?
+	Two phase locking - If you are just readin the data you use a shared lock, for updating you get an exclusive lock. If exclusive lock is unavailable you have to wait.
+
+What do distributed transactions use?
+	Two phase commit - Phase 1 if all are ready to commit it sends commit message to all nodes, if all arent it aborts. In Phase 2 al commit. This can have arbitrary blocking periods.
+
+How do we ensure that updates are applied to all replicas?
+	We have a leader that recieves the update requests, which are forwarded to the followers. Followers only receive read requests, and update requests only come from the leader.
+
+When do leaders return succes in synchronous, asynchronous and semi synchronous replication?
+	In synchronous, when all followers are updated
+	In semi synchronous, when one follower is updated
+	In asynchronous it returns success without knowing all followers have been updated
+
+------- Streaming Data ------
+What are streaming operations?
+	Streaming operations act on data as it arrives in real time, streams are handled as if they have no end - a stream is a sequence of data items that become available over time.
+
+What are the 3 types of streaming applications?
+	Event driven, data pipelines and streaming analytics
+
+What does processing streams often involve?
+	Dataflow graphs: the sources can be sensors, other nodes or message quques, intermediate operations may have one or several inputs and outputs, sinks can be data stores or applications
+
+What are the different ways that data flow can exchange?
+	Broadcast, random, forwarding or key based
+
+------ Stream Processing ----
+What is a tumbling window, sliding window, count based tumbling window, and a session window?
+	A tumbling window is a window of fixed size with no step (non overlapping)
+	A sliding window is a window of fixed size, with overlaps, it is defined by the size of its length and its step
+	A count based tumbling window defines how many events must occur before the window is ready for processing
+	A session window groups events that occur within a gap of eachother
+
+What is event time and processing time?
+	Event time is when the event actually occurred in real life, the processing time is the time of the systems clock when it became aware of the event
+
+What are watermarks and the two types of them?
+	The watermark adds delays before an event can be processed.
+	Watermarks trade of latency for completentss, a tight watermark gives a timely result but may not be accurate, a loose one will decay but will increase completeness.
+	How it works:
+		In windows that use session times, once a window is ready for processing, the time it can be processed is taken as the maximum of the following:
+			Either the latest time within the event times of the window
+			Or the last event time outside of the window minus the watermark
+
+What gauruntees can stream systems provide (there are three)?
+	They can gauruntee either:
+		an event is processed at most once
+		atleast once - needs ability to replay events from source ot buffer 
+		exactly once - this needs ability to replay events and transaction like state management
+

@@ -1,0 +1,242 @@
+=============== User Expereince Recall Revision Notes =================
+	
+	27/12/2025
+
+
+----- Week 1 ---------
+What is Human Computer Interaction, and how + why does it differ from UX of today?
+	Human computer interaction governs how humans and machines work together to achieve a goal. HCI came about when computers were tools that were used solely for work purposes. This meant that it was measured only by quantitative metods such as "time to task". The UX of today accounts for the extension of computers outside of just work processes. Applications like this often are not represented well b the old HCI approach, and so UX works more with a combination of qualitative and quantitative measures, and can be seen as the modern realisation of HCI.
+
+What is the standard for STM load and who proposed it?
+	Miller proposed his "Magic Number 7 + or - 2". This showed that the short term memory can hold 5-9 items at a time without being overloaded and forgetting. UX sugges that we should apply this theory to UX - for examples do not have more than 9 items in a drop down etc...
+
+Didnt write this as a question, but the two most important messages in the first chapter as to be curious, since you have no idea when something new that works better could arise. And to be critical since even well known facts or common knowledge may be based off of unreasonable grounds.
+
+----- Week 2 --------
+What are the four types of user experience, and what are their definitions?
+	The four types relate to when they are experiences. Anticipated UX is the experience the user feels before/just as they are about to use the interface. Momentary UX is when they are actually using the interface. HAD TO LOOK AT NOTES (REVISE) - Episodic UX which occurs just after usage, and Cumulative UX which occurs/cumulates over time using the interface.
+
+UX is a combination of: 
+	HAD TO LOOK AT NOTES (REVISE) - Utility meaning that it is useful, profitable and benoficial, Effectiveness meaning it succeeds in producing a result, Efficient meaning it maximises productivity, Affecitve meaning it evokes emotion, and Engaging.
+
+----- Week 3 -------
+How does UXD differ from UX?
+	UXD referes to User Experience Design, this entials designing the actual visual appearance of the interface, be it the style, layout etc. UXD is not the natural home of a UX professional. UX involves more research and evaluation of user experiences.
+
+What is a design system?
+	COULD REVISE A TAD - A design system could be thought of as the way the UXer completes the design without having anything to do with UXD. It entails a set of principles/standards for designing a system that looks and feels the same across contexts (products, platforms or channels). It has guidelines, components or assets pre made.
+
+What is a design language?
+	REVISE THIS - A design language is like a design system, except it focuses more on the operational aspects of the interface
+
+What is interaction design?
+	Interaction design involves the design of the systems flow and navigation between parts of the product or service.
+
+What is a zero UI interface, and a conversational intrerface? Give examples of both.
+	A zero UI interface has no visual realisation, for example things such as Amazon Alexa. A conversational interface could still have a screen, but only operating using natural language - i.e. siri built into an iphone.
+
+----- Week 4 -------
+What is accessability in the contect of UX? What are the two ways it is incorporated in practice?
+	Accessability is the ability for the system to meet the skills/requirements of the user for engaging with the system, it can be realised either by training the user up to the systems needs, or developing the system to meet the humans needs.
+
+What is the definition of attention within UX?
+	Attention is the place/site that interaction is occuring between the user and the system (i.e. where the user is currently focused).
+
+What is the definition of exploration within UX?
+	Exploration is the process of navigating from one interface component to another.
+
+What is there difference between explicit and implicit communication?
+	Explicit communication clearly evokes a message without the user having to work out what is meant - e.g. an error message
+	Implicit communication gives a hint/idea of what is meant, leaving the user to conclude - e.g. the error message being red
+
+What is affective computing?
+	Affective computing is when users are connected to biometric measures such as galvanic skin response while using an interface, this allows their response and emotion to be tracked in response to interaction.
+
+List a few types of input/control:
+	Gesture control, typing, haptic ..
+
+----- Week 5 -------
+What is a participant in UX?
+	A participant is someone informed and consenting to the incusion in a user experience interaction. We do not use the word "subject" in UX.
+
+What are the potted principles of ethics in UX (there are 8)?
+	HAD TO LOOK AT NOTES (REVISE) - Competence meaning we stay up to date, know our limits and ask for advice when not completely knowledgable, Integrity meaning we have no desired outcome, Science meaning we follow scientific guidelines, Respect meaning we respect out participants, Benefits meaning we maximise benefits while minimising harm, Justice meaning that we use participants who will benefit from the results, Trust meaning anonymity,  confidentiality and privacy, Reponsability meaning e have a duty of care for pts and community.
+
+----- Week 6 ------
+What are the methods of requirement gathering?
+	Observation, Discussion, Analysis and Interpretation
+
+What is digital phenotyping?
+	Digital phenotyping is when we form a digital representation of a person via their data which is actively or passively gathered fromt the devices they use.
+
+What is the difference between active and passive data gathering?
+	Active involved conscious user input to provide - i.e. inputing their current mood, while passive can be gathered without the user being aware - i.e. taking their screen time
+
+What is user centred design and what other concept did it lead to?
+	User centred design is when a system is designed with the user's needs and requirements as the pinnacle design driver. This concept led to universal usability whereby a system is designed while trying to be effecitve to all possible users of varying types.
+
+What are the four type of user roles?
+	HAD TO LOOK AT NOTES (REVISE) - Actor (initiates acton w system), Proxy (not a specific user, but is playing a role), Stakeholder (less involved w action, more concerned w outcomes), and Role (persona an actor or stakeholder takes)
+
+What is an archive and when would we use it?
+	An archive is a representation of an enterpise made by the things and artefacts it produces over time. We would use an archive when there are no users available for requirements gathering.
+
+What is a digital twin?
+	A digital twin is a digital respresentation of a real world object, often mimicing its realisation in the real world. For example the digital version of a camera on the original iphones.
+
+----- Week 7 ------ SLIGHT REVISION NEEDED
+What are the informal methods of modelling user requirements?
+	HAD TO LOOK AT NOTES (REVISE) - User stories meaning the functionality that will be available to a user, Use cases meaning the system under various conditions, and Personas (fictional user) + Scenarios (descr of user interaction)
+
+What are the semi formal methods?
+	Wireframes, mock ups and storyboards + priority poker
+
+What are the formal methods?
+	Flow charts, unified modelling language (UML), State transition diagrams.
+
+What caveat should be kept in mind about successful testing?
+	Successful testing does not gauruntee a successful system. If the user requirements was carried out incorrectly meaning it could have captured the wrong requirements, then the system could still be unsuccessful.
+
+What methods suit each of these time windows: 6 months, weeks, days, hours
+	6 Months means we can fully embed ourselves into the company, 6 Weeks we can carry out focus groups and user surveys, 6 Days we can carry out interviews and focus groups + surveys, 6 Hours we can just use informal methods.
+
+----- Week 8 -------
+What method of development should you use when you know the endpoint?
+	Agile - iterative development method whereby the system is developed in sprints, and evaluated after each. Then the system is carried forward to the next iteration. Agile iterations usually have requirements, design, development, testing, deployment and review.
+
+What method of development should you use when you dont know the endpoint and have a lack of user requirements?
+	Cowboy coding - developers have full control over development, deciding time frames, algorithms used etc. Best used in research and development and skunkworks. Skunkworks is a team external to main development researching quick innovations.
+
+What are the rest of the development methodologies which are less suited to UX (still useful to know)?
+	Spiral wplits tasks into individual sub tasks, Waterfall where each phase must be completed before moving onto the next with a rigid and strict order, Iterative (circular process), Structured systems analysis nd design is the same as waterfall but has much more time for user requirement gathering, Scrum has pigs (devs) and chickens (target users) + sprints of 24 hrs or 30 days, Rapid application development aims to test rapidly created models with users before main development, eXtreme programming (RAD but with pair programming).
+	NEEDED TO REVISE THIS BUT IS NOT KEY I DONT THINK SINCE THESE ARE THE METHODS LESS SUITED TO UX
+
+What is a window toolkit and what is a skin?
+	A window toolkit is a system which provides premade templates for developing interfaces so that the interface appears the same across different window managers. A skin is a template that can be applied to an interface which preserves its fundamental structure and behaviour, but changes the visual appearance or theme of the interface.
+
+------ Week 9 ------
+What is a prototype in UX?
+	A prototype is a stripped back and simple example of the final implementation of an interface. They should be easy to make and disposable so that they encourage incremental imporvement. They can be low or high fidelity, usually wanting to start with low fidelity.
+
+What is rapid application developmnent?
+	Producing a minimum version of the product to gather user feedback early in the dev process before the main implementation. Reduces time to market and improves customer satisfaction.
+
+What is meant by wizard of oz (ing) the functionality of a prototype?
+	This is when the functionalitt is not actually implemented, but we make it behave as it would when it is implemented using some kind of human input. For example a human changing the paper screen layout when the user presses a button.
+
+----- Week 10 -----
+What is situational impairment and what kind of UX does it give importance to?
+	Situational impairment is a barrier to acces which comes out of the situation the user is engaging with the interface in. For example if they are on a very shaky train meaning they struggle to type accurately. This gives rise to transformative interfaces which adapt to situations - for example the keyboard becomes larger when motion s detected.
+
+What is extensability? - the ability for an interface to be built upon and improved after further info comes to light. 
+What is accessability? - The ablity for a system to be used even by those with disabilities - they can perceive, understand and interact with the interfaces. They sometimes need to use "assistive technolgies"
+
+What barriers to access exist?
+	Visual impairment, Auditory, sensory, even olfactory!, situational, combinatorial, physical, cognitive
+
+What is literacy?
+	The ability to understand and create natural language with printed or written material.
+
+What are the potted principles of accessability?
+	Openness meaning that the system is open to change or addition of assistive technology, Flexability, Percievability, Operability, Understandability REVISE THESE - POOUF
+
+----- Week 11 -----
+What ways is usability usually measured?
+	Time to task, number of tasks completed, navigation time, number of incorrect choices, observations of user frustration and frequency of components that are not used.
+
+What are the three usability models and how do they work?
+	Human Processor model estimates the time it will take for each task to be completed by a user and uses this to calculate interaction times for different tasks and therefore performance.
+	GOMS - Goals, operators, methods, selection rules reduces interactions to primary operations
+	KLM/GOMS - keystroke level monitoring of GOMS.
+	
+What are the potted principles of usability?
+REVISE THIS	- Situational awareness, Self description, Robustness, Progressive disclorure, Scalability, Familiarity, interaction stability meaning that operations can be resumed after failures. 
+
+----- Week 12 -----
+What is affective computing and how is it similar or different to emotional use?
+	 Affective computing is he ability for a computer to recognise or convey emotion from or to a user, while emotional use means system use that evokes an emotion or feeling in a user. They are not the same thing
+
+What are the levels for designing for emotional use? 
+	Visceral meaning the look and feel, behavioural anf reflective (culture or meaning)
+
+What is meant by visual complexity?
+	Visual means the level of difficulty in verbally describing a visual appearance.
+
+What is meant by visual aesthetics?
+	Visual aesthetics is the science behind what people find visually appealing
+
+It is impossible to mass produce an item that fits everyone, what are some ways to remedy this?
+	Customise mass produced items or customise your own, just live with a personalised item, design your own products or modify purchaseds products
+
+What are the potted principles of emotion, and which is the most important?
+	Personality is the most important, quality, visual aesthetics, flow, pleasantness and satisfaction
+
+----- Week 13 -----
+What is gamification?
+	Applying game principles to applications that are not games.
+	
+What is meant by adding group dynamics to systems?
+	Adding interaction styles often seen in group communication to systems to make them feel more personal.
+
+What are the three ways gamification can be applied?
+	Elementary - adding just visual elements
+	Bolt on - adding elements more fundamental to games but that an still be added easily - e.g. leaderboards
+	Ground up - implement game elemtns from the outset of development
+	
+What are the potted principles of engagement?
+	Play, progression and social dynamics
+
+----- Week 14 ----- User evalutation has a link to the collection an modelling of user data
+What is expert evaluation via the audit?
+	When a system is formally evaulated using walk throughs or heuristic evaluation by experts
+
+What are the qualitative methods of user evaluation?
+	Interviews, participant observations, archival and unobstructive methods.
+
+What are the quantitative methods, and should they be used solo?
+	Quantitative methods should only be used as a hybrid, they include card sorting, remote observation, collecting data by proxy. PULSE - page views, uptime, letency, seven day active users, earnings. HEART - happiness, engagement, adoption, retention, + task success
+
+Is it acceptable to gather evaluation in just one session?
+	No, UX is longitudinal and so needs longitudinal usage data if poss
+
+---- Week 15 ------
+
+What is meant by human in the loop?
+	Human in the loop is when a human is positioned as part of a digital system (loop) to help with its operation, by things like input output, decision making or feedback.
+
+What is digital phenotyping?
+	When a human wears or carries a devices which measures their data and models a digital twin of themselves.
+
+------ Week 16 ------ Evaluation analysis has links to the gathering of user requirements
+What are the main things needed from a hypothesis?
+	 A hypothesis needs to be quantifiable, refutable and data driven
+
+What does evaluation analysis link to?
+	Gathering of user requirements
+
+What is the difference between inductive and deductive reasoning?
+	Inductive reasoning applies a small sample conclusion to its general population, while deducitve works the other way, applying a general rule to a small sample.
+
+What variables can there be and what are the ways they are measured? 
+	The sources of variables are behavioural, stimuli or responses. There can measured as ordinal, nominal, cardinal, interval or ratio. 
+
+What are descriptive  and inferential statistics?
+	Descriptive stats concern the normal distr of your results, thet you expect an entire population to show
+	Inferential support the generailsation of the resuls meaning the sample characteristics can be applied to the population.
+
+What are the methods for participant sampling?
+	Simple random, stratified, snowball, opportunity, multi stage, qouta, systematic
+
+----- Week 17 ------
+What are the two kinds of evaluation in UX
+	Summative evaluation is concerned with evaluation afdter interaction over time while formative occurs before the software is developed or the hypothess is tested
+
+What are the commissioning constraints on UX evaluation and what do they mean?
+	Just in time, too little time, insufficient funding, non technical commissioners, Due dilligence, implicit overrun, pre supposed outcome, unconstrained experiments never occur
+
+What are the limitations, and what are the available skills?
+	The limitations are time, participants and resources/funding
+	The skills are instrumentation, collection and analysis
+
+What are the types of informational requirements?
+	Flavour (least resource hungry) and idea elicitation, informal and formal elicitation, laboratory elicitaion (most resource hungry)

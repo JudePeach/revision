@@ -1,0 +1,240 @@
+============ Revision Questions - Mostly From Seminar Questions =================
+
+------- UX Landscape ---------
+
+What is the significance of the song Toms diner in user experience?
+	Toms diner was an acapella song that the man who invesnted mp3 compression knew would break his current algorithm. The singers vocals had much better ranges and he knew his current algorithm would not capture them well. This introduces one of UXs first principles, and the same of science, that something must be broken or proved false in order to improve it. A hypothesis cannot be proved true, it can only be proved fale/refuted.
+
+Why does toms diner represent a 'good science'?
+	It shows a good science since it breaks a hypothesis. A good scientist should make a quantifiable and refutable hypothesis and carry out detailed experiements trying to disprove said hypothesis. Only when you cannot disprove it to a certain significance level, can you accept it as holding.
+
+Why should you be cautious?
+	You should be cautious in science because there is alot of false knowledge, or facts based on little truth or evidence.
+
+Why should you be curious?
+	You should be curious os that if you hear one of these facts or ideas which doesn't seem right to you, you should have initiattive to investigate its foundation and evidence, before choosing yourself wether you agree or disagree. Dont be a sheep.
+
+Give an example for common sense being incorrect:
+	Saying that blind people cant see seems very true. However this is a massive generalisation. Blindness occurs on a spectrum and so not every person suffering blindness cannot see 100% clearly.
+
+Why is science sometimes not enough?
+	Science cannot measure things that are individualistic and personal. People have emotion and ideas, meaning that what one person likes or enjoys, another person may not nesseceraly also enjoy. Therefore we need to also view UX in a non scientific lens so that we can capture subjective topics it entails.
+
+What is the key focus of HCI, andhow does it relate to UX?
+	Human computer interaction examines the process of communication between humans and machines. However HCI was rooted when computers were merely work tools, and were not used in the way they are today. This means it was viewed a science and used only quantitative measures such as 'time to task'. As computers have evolved they are no longer just work tools. This means someone may actually want ot spend a long time on ao task - i.e. a game. Therefore UX realises HCI in this modern age, including qualitative measures and subjective topics.
+
+Does UX only occur when using the artefact?
+	No UX occurs before, during, after and over time of using an artefact. This is anticipated, momentary, episodic and cumulative UX respectively.
+
+------- Requirements --------
+
+What is a design system, design language and are they different?
+	A design system is a collection of templates and tools which enable developers to create a system which performs the same across different contexts or machines. A design langauge is the same, except it focuses more on the operational aspects of the system (more interactive, focusing on product or brand of a system).
+
+Describe a conversational interface and give an example, do the same for zero UI interfaces:
+	A conversational interface is when the human interacts with the machine using natural language, for example this could be typed or spoken through a microphone - e.g Siri. Zero UI systems are the same, except they have no visual representation - e.g. Alexa.
+
+Who should design interfaces?
+	User Experience Designers should be the ones who design interfaces.
+
+Pick a design system and describe it:
+	One design system would be Windows metro UI. It is a tile based interface with non fixed tile sizes, dynamic icons, and multiple pages which can be turned/scrolled across.
+
+Is it our job to build with a design system, or build our own?
+	It is our job ot build using a design system, it is not out job to create a design system, that is the job of UXD.
+
+Pick one input modality and describe it:
+	One input modality is textual based, this is when the user inputs comands using a keyboard.
+
+What are the main sensory channels and explain them?
+	The main sensory channels are: somatic, auditory, visual, olfactory
+
+How does UX relate to previous Human Factors work?
+	UX is a build upon human factors work, but accounts fo the modern use of computers, including the subjective experience they provide and measuring with  more qualitative views.
+
+What is affective computing?
+	Affective computing is when a human is connected to biometric instruments during interaction with an interface. This allows the computer to recognise and understand the humans emotional response to the aspects and behaviour of the interface.
+
+--------- Modelling + Design -------
+
+What are the 8 main ethical principles? - Just SCRRIBT
+	Justice, science, competence, respect, responsability, integrity, benefit, trust
+
+How would you get the 'what' if you had 6 months, weeks, days and hours?
+	6 months - fully embed yourself into the organisation
+	6 weeks - use targeted focus groups and task analysis
+	6 days - focus groups, surveys and interviews
+	6 hours- informal methods
+
+Why are post its s important?
+	Post its are easily disposable and are high in supply. This means they support the iterative approach to modelling. If we don't like an aspect it can easily be disposed and redone. They also support interactive and cooperative design.
+
+What is user centred design?
+	User centred design is when a system is design entirey based on user requirements, the users decisions are the core to driving development decisions.
+	
+What do you do if there are no participants for a corporate system build?
+	 If there are no participants we use an archive. This is when we use the artefacts and things the corporation has produced and does produce in the past and present to decide the user requirements.
+
+What are the two main danger points to remember when undertaking UXD?
+	The two main danger points are that people dont often know WHAT they want. And beleiving we have the full picture.
+
+What are differences between informal and semi formal methods?
+	Informal methods do not actually produce any proposed solution, they just consist of use cases, user stories, and personas + scenarios. Whereas semi formal methods begin to actually propose a solution using things like storyboards.
+
+Elaborate the cautionary notes - successful testing != successful system due to requirements gathering
+	Just because your testing appears successful, does not gauruntee that we have produced a successful system. IF the users requirements were not gathered as the user genuinely intended, then we have succeeded in producing an incorrect system.
+
+Differentiate between personas and scenarios:
+	Personas are the potential users who will be using the system, while scenarios are the potential use situations these users could find themselves in.
+
+-------- Development ----------
+
+Which development methodology suites UX best - also briefly descibe a few other ones:
+	Agile suites UX best due to its iterative process and higher user involvement before the start of each iteration + user testing at the end of each. A few others include waterfall, whereby each stage has strict and rigid order, and a stage cannot begin until the previous is fully complete. You also have spiral where tasks are split into sub tasks. And a few others like rappid application development, eXtreme programming, structured system analysis and design.
+
+Given the need to rapidly create an interface prototype, which method would you use and why?
+	Rapid application development. This is because it focuses on building a viable product as soon as possible. This reduces time to market and increases user satisfaction. Essentially this method produces a working prototype the fastest.
+
+Whats wrong with cowboy coding - when would you not use it?
+	Cowboy coding has no estimaes on time windows, resources needed etc. Therefore it would be very unhelpful when user are inder strict budgets and time constraints, it would be better to use methods such as agile when you know the end goals of a system.
+
+What is seperation of concerns and why is important?
+	Seperation of concerns is when each logical component of a system is divided into sub teams. It is important so that the work of one team or team member does not impact the work of another. For example in model view controller architecture, if a developer worked on the modela nd the view, their work could overwrite or change the work of another developer, who was say working on the view and the controller.
+
+What is prototyping?
+	Prototyping is when we make a mock up stripped back version of the final product to test elements on the target user.
+
+Why does fidelity matter? - governs how a user will be scared to not like the product - if the prototype looks very long to make
+
+------ Accessibility ---------
+
+Pick an interface bridge and describe it? - e.g. screen reader that works with html - sensory interface bridge.
+
+What is the relationship between effective and accessible design?
+	I wouldd say that effective design encompasses/prerequisites accessible design within it. However accessible design does not gauruntee extensive design.
+
+What are the 5 main principles of effective design? - POOUF
+	Percievability, operability, openness, understandability, flexability.
+
+How can you facilitate each of the 5 principles?
+	Openness - API support, allowing things like interface bridges like screen readers to be easily plugged into the application - should allow all input and output to pass through third party software.
+	Understandability - langauge support, simple language, clear error messages
+	Flexability - develop free from context, so that the system is flexible to the type of machine and environment that it is used in
+	Percievablity - ensure that the design is not visually over complex, easy to distinguish colour themes, or even customisable colours
+	Operability - can all elements be controlled via keyboard, can user personalise interaction settings
+	
+------- Usability ------
+
+What is the significance of the STAR user interface?
+	First large scale implementation of familiar user conceptual models, skeuomorphism, digital twins etc
+
+What does GOMS stand for and what does it involve?
+	Goals, operators, methods and selection rules - it reduces the human computer interaction to the users primary actions
+
+What are the 10 main principles of efficient design? - SSS PRIF - there is 3 more look at the seminar powerpoint
+	Situational awareness, self description, scalability, simlicity, learnability, progressive disclosure, robustness, interaction stability, familiarity, consistency
+
+Look at how these principles differ from schneidermens rules - our principles tell us what to look for for usability, while his rules more tell you how to incorporate usability
+	
+How do you facilitate each of: situational awareness, self description, progressive disclosure, learnability and consistency?
+	Situational awareness - appropriate and reacive header names, tab highlighting, colour changes in response to situation
+	Self description - Never leave the user in an unclear state, visualise steps at each stage, good documentation
+	Progressive disclosure - use pages, dont show every page at the same time, use drop down menus, use scrollable elements
+	Learnabliy - incorporate instructions and tutorials on first opens so that the system can be learned without manuals
+	Consistency - use the same theme and lanuage style throughout. Universality across platforms and systems
+
+--------- Emotions --------
+
+Why is it difficult to know if affective principles have been captured in software correctly?
+	Affective principles are subjective, what one person feels emotion for, another may feel none for. As well as this it is hard to measure emotion. Therefore it becomes difficult to tell if someone is exhibiting emotion in response to the software. As well as this it is hard to draw cause and effect and we can only do correlations.
+
+How does affective computing differ from affective respones?
+	Affective computing is the ability for a computer to recognise and show emotion using biometric instruments. Affective response is the ability for a system to evoke an emotion from a user based on their interaction.
+
+How does aestethics and visual complexity relate?
+	Visual complexity can be governed by the difficulty to verbally describe a visual appearance, while aesthetics is the science behind what is attractve. Often visual complexty can imply aesthetics, but there is an optimal level whereby too simple or too complex can have a negative aesthetic. This links to the yerkes dodson curve.
+
+What are the 5 main principles of affecitve experience? QAFPS?
+	Quality, aesthetics, pleasantness, flow, satisfaction
+
+Why is emotion difficult to quantify and what is one solution?
+	Emotion is difficult to quantify since it is subjective, one solution is using biometric instruments.
+
+How do you facilitate the five principles?
+	Flow - good operational aspects and structure of operations, defined beginning and end
+	Quality - have quality people, materials and processes
+	Aesthetics - will the users percieve visual aesthetics, is the design beautiful?
+	Pleasantness - does the user feel good after and during use, will the emotional response be positive.
+	Satisfaction - will the user remember a good experience with the system
+-------- Engagement ---------
+
+What are the pros and cons of gamification?
+	Gamification can increase engagement and keep users motivated, and wanting to use the system more. However there is a trade off whereby if the system becomes too gamified, users will not get lots of work done, they could get addicted, and competitive types could have unhealthy competition.
+
+What are the three main principles of engaging experience? - PPS
+	Progression
+	Play
+	Social dynamics
+
+How could you include social dynamics into your system?
+	Use language often seen in social settings, i.e. personal and fun language. We could also include elemntary options like leaderboards, chat rooms, collaboration environments etc.
+
+How do you facilitate each of the three principles?
+	Progression - include clear paths to improve, with optimal difficulty. Level systems, points systems and so on. The system should evolve as the user makes progress. Narrative flow
+	Play - include funology, game elements, fun language and designs, personality
+	Social dynamics - social language, social elements in the system
+
+How can you enhance the users perception of fun?
+	Remeber the yerkes dodson curve
+	Find out what they actually enjoy
+
+What is flow and how does it relate to engagement?
+	Flow is a state that occurs when the users skills match up well to the environment and they are focused only on the task, the person feels in contorl. It relates to engagement since flow state balances between challenge and skill at the optimal level for enjoyment, gives clear goals and provides immediate feedback.
+
+--------- Evaluation --------
+
+What are the key issues with lab work?
+	Lab work lacks external validity since it is in a controlled environment. There can also be observer biases, sampling issues, funding problem, and poor application to longitudinal research.
+
+What problems may exist when undertaking isngle method evaluation?
+	Single method evalutation especially with quantitative data can lack richness and only draw correlations. In order to get more deailed feedback and show cause and effect it is always a good idea to use a combinatorial method so that you get qualitative and quantitative evidence.
+
+Why is co operative evaluation different from other methods?
+	It ensures validity of the experiment since two experimenters validate the research and ensure their results align. It prevents experimentr bias.
+
+What is digital phenotyping and how is it realised?
+	Digital phenotyping is when a human is represented digitally using measurements taken actively or passively from a device they carry or wear. It creates a digial twin of the human.
+
+What are active and passive sensing?
+	Active involves conscious entry from the user, while passive does not - i.e. screen time readings
+
+What does 'small N' mean?
+	An experiment witha  very small number of participants
+
+-------- In Real Life --------
+
+What is the real world limited by? CIrLS?
+	Information requirements
+	Constraints
+	Limitations
+	Skills
+
+What are the 8 commmissioning constraints?
+	Too little time
+	Just in time
+	insufficient funding
+	due dilligence
+	pre supposed outcome
+	Non specialist
+	implicit overrun
+	unconstrained experiment
+
+Why is optimism a bad mindset?
+	Thinking you have got every bug, met every requirement, satisfied every user etc... is never true in the real world
+
+Describe the 'second system effect':
+	Designing a successful system in the first try, makes you ignore the potential risks when developing a second one, and thertefore enshitifies you second system, normally because you try and overcram as many of the successful parts of the first system you can
+
+
+
+

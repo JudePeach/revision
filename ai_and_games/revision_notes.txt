@@ -1,0 +1,170 @@
+========== AI and Games Revision Recall Notes ==============
+
+---- What Is A Game? -----
+What are the three things that a game tree requires?
+	A finite set of players (agents)
+	A numerically described outcome (payoff)
+	A clearly defined set of rules
+
+What do each of the following represent: leaves, root, nodes and edges?
+	Leaves represent terminal game positions where the game is over
+	The root node represents the start of the game
+	The nodes represent game states/decision points
+	Edges represent choices/moves which are made in the game.
+
+What do game trees fail to represent/capture?
+	Trees cannot capture moves involving chance, they cannot represent games where players play moves simultaneously, they cannot capture games of imperfect information
+
+What is meant by imperfect information?
+	When there are game states which are the same, but appear in different parts of the tree - but it is impossible to distinguish between the two. You dont know where in the game tree you are given the game state
+
+How do we handle chance, imperfect info, and simultaneous moves in game trees?
+	To handle chance we introduce nodes called the nature where it is neither players turn, branches from nature nodes are labelled with the probability of them being taken.
+	To handle imperfect information we group indistuinguishable nodes
+	To handle simultaneous moves we use imperfect information
+
+What is a zero sum game?
+	A zero sum game is when all players win reward is equally balanced by the losses of every other player. At every leaf the sum of all players payoffs = 0
+
+----- Strategy -----
+What is a fully specified strategy?
+	A fully specified strategy is when the same choice is made for all identical decision points. Formall - at each node, for all nodes in the information set, the same action is taken
+
+What is a pure strategy?
+	A pure strategy is a sub tree of a game tree where the root belongs to the strategy, whenever it is player i's turn: exactly one of the available moves belongs to the sub tree, and for all nodes in the same info set the same action is taken
+
+What is the method for finding all strategies when: player is making the first move, and when the player is not making the first move?
+	When the player is making the first move we add all of the possible strategies
+	When the player is not moving first we times all the possible strategies
+
+----- Normal Form Of A Game ------
+How do we represent games which dont involve chance in normal form?
+	When games dont involve chance we just enumerate all strategies and build payoff tables from this
+
+How do we represent games which involve chance in normal form?
+	When games involve chance we use the expected payoff which is the weightd average of the leaf payoffs
+
+------ Extensive vs Normal Form ------
+When do we use normal form, and when would we instead use extensive form (game tree)?
+	We use normal form when the game is small enough to enumerate and we want to carry out equilibria analysis, but we use extensive form when the game is too large, and modelling actual play or learning is repeated many times
+
+What is the difference between infinite plays and infinite choices?
+	Infinite plays is when a game has one play which can continue forever, infinite choices is when a player has infinite moves to choose between
+
+What is Zermelo's theorem?
+	In a 2 person zero sum game with perfect information, no chance, exactly one of the following holds:
+		Player 1 has a winning strategy
+		Player 2 has a winning strategy
+		Draw because both players have a winning strategy
+
+----- Best Responses (Equilibria) In Zero Sum Games --------
+What is a best response?
+	A best response means that the strategies payoff is larger than or the same as the payoffs for every other strategy
+
+What is meant when a  player has winning strategy?
+	The players strategy is a best response to all other players strategies
+
+What is a nash equilibrium?
+	When all players strategies are simultaneuos best responses to one another
+
+What is a sub game equilibrium point?
+	A tuple of fully specified strategies, one per player, such that the tuple gives an equilibrium point for each sub game
+
+------- Equilibria In Non Zero Sum Games --------
+What are the alternative approaches to equilibria here?
+	System level analysis - looking at stable staes for populations of agents
+	Regret minimisation - focuses on difference between actual and optimal payoffs
+	Negotation - agents can communicate and coordinate
+
+----- Equilibria In 2 Person Zero Sum Games (Normal Form) -------
+What makes a strategy an equilibrium in normal form?
+	If it is maximal in its column and minimal in its row
+
+Shortly explain the minimax theorem:
+	For the minimising player their best choice of moves in normal form will be the minimum of the column which is the maximal choice for the other player. This works the same for the other, maximising player, whose best move will be the maximum choice out of the row which is the minimal choice for the other player. This means that if minmax = maxmin, then there is an equilibrium point
+
+What is a saddle point?
+	A saddle point is when a point is maximal of one axis, while also being the minimal of the other axis
+
+What is the value of a game?
+	The value of a game is the unique gaurunteed payoff at any equilibrium point
+
+----- Mixed Strategies -----
+What is a mixed strategy?
+	A mixed strategy is the same as a pure strategy, but at nodes of the same information set, the move is instead chosen from a probability distribution instead of being fixed.
+
+How do we evaluate mixed strategies?
+	We use the expected payoff to evaluate them
+
+------ Equilibria With Mixed Strategies ------
+Every game with finitely many pure strategies for each player has at least one:
+	Mixed strategy equilibria
+
+What does it mean for a strategy to be dominated, and what does it imply if so?
+	A strategy is dominated if all other lpayers choices lead to payoffs >= the payoff of the strategy. It implies that rational players would never play a dominated strategy, and so we can remove them from game representations. We must pay attention to the order we remove strategies however
+
+------ Minimax Algorithm -----
+What are the two ways to calculate the value?
+	The first way is depth first where we calculate the value from root to leaf, recursively exploring the sub trees, calculating the value for each, passing it back up to the root
+	The other way is bottom up here we start at the leaves and apply minimax ot the parents, doing the same to work up to the root
+
+----- Alpha Beta Pruning ----
+What do the values of alpha and beta start as at the root?
+	Alpha starts as positive infinity, Beta starts as negative infinity
+
+What does alpha represent and when is this bound updated?
+	Alpha represents the best payoff the maximising player can gauruntee, it is the lower bound and is updated at maximising nodes
+
+What does beta represent and when is this bound updated?
+	Beta is the best payoff the minimising player can gauruntee, it is the upper bound and is updated at minimisng nodes
+
+We prune when alpha is greater than or equal to beta
+
+----- Evaluation Functions ------
+When are evaluation functions used?
+	We use evaluation functions when trees are too large to completely search, using this instead provides approximate solutions
+
+What does an evaluation function do?
+	An evaluation function  assigns a numerical score to positions without searching any further
+
+What is the standard approach for calculating an evalution function?
+	The weighted sum of the possible payoffs
+
+------ Learning In Games -----
+When is learnig preferred over methods like minimax?
+	Learning is preferred when the branching factor is high, good heuristics cant be found, or it is hard to compute equilibria
+
+Why is learning hard?
+	Learning is hard since it has to make online decisions (learn during play), games tell us when we go wrong, but not why/how we did
+	Online decisions involve balancing between exploitation and exploration
+
+What is a multi armed bandit?
+	A multi armed bandit is a formulation for one step decision making
+
+What is Regret?
+	The regret is the opportunity loss for one step. Maximising cumulative reward is the same as minimsing total regret
+
+What is the upper confidence bound?
+	The upper confidence bound is an estimate of an upper confidence for each value
+
+SEE WRITTEN LECTURE NOTES FOR FORMALISATIONS
+
+------ Monte Carlo Tree Search (MCTS) ------
+What are the four phases of MCTS and briefly describe each one:
+	Selection - choosing the next most urgent node to explore based on a tree policy
+	Expansion - adds said node to the partial tree
+	Simulation - plays the game to completion using a default policy by random play
+	Backpropagation - updates the statistics od the added node and its ancestors based on the result of simulation
+
+What is a tree policy and what is the standard one in MCTS?
+	A tree policy tracks for each node the number of transitions into it, and the total reward from episodes passing through the node. It should balance exploration and exploitation
+
+What are the two approaches ot backpropagation?
+	A tabular approach maintains a table which is incrementally updated, it stored the current estimate of the expected reward fro taking action a from situation s
+	Function approximation is used if there are too many situation action pairs and uses a supervised regression model - can use gradient descent for this
+
+What are the four possible ways of choosing the next best child to explore?
+	Robust child - Choose the child with the most visits
+	Max child - Choose the child with the best average reward
+	Max robust child - Choose the child maximal in both the reward and visits
+	Secure child - Choose the child who maximises the lower confidence interval
