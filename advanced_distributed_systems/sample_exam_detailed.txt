@@ -1,0 +1,124 @@
+=========== Sample exam with detailed conscious thought while executing ===========
+
+----- 14/01/2026 --------
+
+1. True or falses
+
+	Load balancing is the process of combing heteregeneous worloads to run on a single server.
+		False, load balancing is when load is spread evenly across available nodes. This sounds more like data integration, whereby data is combined in a way to reduce heterogeneties. Heterogenities are just a fancy way of saying differences/diversities
+
+	Littles law provides a limit for the speed up of a distributed system that can be parallelised. 
+		False, this is getting muddled Amdhals law which states that there is always part of a program that is sequential and cannot be parallelises. Littles law is a queing theory law that states in a steady state (arrival rate = service rate), the average number of a customers in the system is the product of the arrival rate ans service time.
+
+	In byzantine failures, faulty components may exhibit arbitrary behaviour.
+		False, byzantine failures fail with completely unexpected behaviour and so this completely holds
+
+	In distributed systems it is useful to assume that latency is zero.
+		False, this is one o fthe 8 fallaciaes of distributed computing. If we assumed latency was zero we woulf miss lots of requests, updates etc, since in reality they take a few milliseconds. As well as this the latency is affected by distances, mediums used, etc
+
+
+2. 90 percent of an application is parallelisable, the rest therefore is sequential (10%). Based on Amdhals law what is the maximum speed up that can be achieved.
+
+	When the max speedup is achieved, it assumes that the number of computers to be execute in parallel is infinite
+	This makes the amdhals formula tend to just 1 divided by the sequential part
+
+		Therefore the formula is 1/0.1 = 10 times
+
+	The formula for the speedup in general (not maximised) is given by:
+		
+		1 // ((1-P) + (P//N))
+	
+3. A service is replicated onto four computers. Each computer has a mean time between failure of 9 days. When a failure occurs it takes 1 day to fix. What is the availability of the service.
+
+	The availbility of a service is given by 1 minus the probability that every replica fails
+	The probability that every replica fails used simple probability logic - p(every replica fails) = the product of each failing
+	The availability of a single replica is given by the mean time between failures divided by the sum of the MTBF and the mean time to repar.
+	And the prob is just 1 minnus this
+
+	Also known as uptime divided by the uptime + donwtime - dont remember it like this you will just confude yourself
+
+	So the availability of one of the computer is 9/10 
+	Therefore the porbability it fails is 1-0.9 = 0.1
+	Raise to the power of four
+	Then minus from 1
+	gives us 0.9999
+
+4. True or False:
+
+	Monte carlo simulations rely on random numbers - True - monte carlo sims generate random numbers when creating inputs for system simulation
+	Performance modelling is not the same as performance tuning - True, performancd modelling captures only the essential parts of a system to simulate its behaviour under various conditions and to answer "what-if" Qs. Performanc etunign actually changes the system in an aim to make it perform better
+	When building distributed systems it is useful to assume the network is homogeneuous - false, this is another one of the 8 fallacies. In reality network nodes vary massively, in operating system, hardware, use cases etc. Therefore we should use standard technologies when communicating such as XML rather than assuming that the systems are the same
+
+5. A server has two queues. Any time the servers CPU is free, a request will be picked at random from one of the queues. If the request requires 100 msec to process and arrive at a rate of 350 per min on one queue, 250 on the other. What is the most likely number of requests in the system at any given time?
+
+	This is a littles law queueing problem. In a steady state the amount of rquests will be the product of the arrival rate and service time
+
+	The service time is 100 ms = 0.1 sec
+	the arrival rate is 350 + 250 = 600 per min = 10 per sec
+
+	requests = 10 * 0.1 = 1
+
+	Therefore at any time there will be only one request waiting
+
+6. In cloud computing which of the following is fundamental to resource provisioning and sharing?
+
+	Not byzantine agreements - this is a framework for nodes to recover after arbitrary failures
+	Not volunteer computing - this is when people volunteer their idle compute power for large scale projects (normally research projects)
+	Not software as a service - this is a cloud computing service model
+	It is virtualisation. Unlike grid computing cloud provides elastically scaling resources, meaning that it provisions power as demanded and no one owns what they use. Virtualisation makes this possible by dividing one machine into fully un coupled and seperate parts so that customers can use them as virtual machines
+
+7. See the C program back one dir
+
+8. Given a query:
+	SELECT DISTINCT c_name, o_orderkey,
+	FROM customer, orders
+	WHERE c_custkey = o_custkey
+
+	Which partitioning policy is best:
+		
+		the main thing this question needs attention to is the where condition, we want as many of the equality items to be on the same partition to avoid wasting time and resources repartitioning and accessing multiple nodes
+
+		Round robin partitioning would not be the best. This would result in customer and orders with different keys being on different nodes and so would cost alot due to repartitioning
+
+		Partitioning by primary key would cause this exact same issue
+		
+		Paritioning by customer name and order key would be better but still suffer the same issues
+
+		Partitioning by o_custkey and c_custkey is best since it would place orders and customers with the same customer key on the same node. Therefore the condition can be evaluated by accessing only one partition
+	
+
+9. In map reduce word count, if we wanted to change the functionality so that it counted the occurences of 3 word phases rather than counting the occurences of single words what code would we need to change:
+
+	We would not need to change reduce at all, all this does it loops over the key value pairs and stores a cumulative count for each of the same keys, if the keys change the behavious will still be the exact same.
+
+	However we would have to change the map code to instead loop over a 3 word sliding phrase window rather than just looping by individual word. That is the only change we would need to make/
+
+	Therefore the only part that needs to change is the mapper code
+
+10.  What is sharding in NoSQL databases
+
+	Sharding is a method for distributing data across a cluster of machines
+	it is not exacly the same as partitioning in that it doesnt directly divide a larger database up into divided parts, it just distributes said parts.
+	It is not a technique for replicating data across multiple servers - this is replication
+	It is also not a way to ensure data is consistent across multiple data centers.
+
+11. Assume we have the following input stream, where each entry is of the form (value, timestamp), where time starts at 0:
+
+... (M, 21), (L, 20), (K, 19), (J, 17), (I, 16), (H,15), (G, 11), (F, 10), (E, 9), (D, 5), (C, 4), (B, 2), (A, 1)
+
+What are the contents of the first two session windows with a gap of 3 seconds?
+
+if time starts at 0 then the list will have the lowest timestamp on the right
+
+	remember also a session window records events that occur withing a gap of eachother - it is not just saying record all events each 3 seconds
+
+	it is saying record events that occur within 3 seconds of eachother, and stop once no event comes within 3 
+
+	so the list here would be:
+		
+		window one (right):
+			[(D, 5), (C, 4), (B, 2), (A, 1)]
+
+		window two (right):
+			[(G, 11), (F, 10), (E, 9)]
+		
