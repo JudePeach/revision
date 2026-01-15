@@ -10,7 +10,7 @@
 
     What is the definition of a distributed system? And what are the three main characteristics of them?
         A distributed system is a system whos components (hardware or software) are physially distributed and connected by message passing.
-        The three main characteristics are they operate over a network, are physically distributed, operae concurrently and have independant clocks
+        The three main characteristics are they operate over a network, are physically distributed, operate concurrently and have independant clocks
         Appears to its users a single coherent system CORRECT
 
     What did Leslie Lamport say means you are working with a distributed system?
@@ -227,7 +227,7 @@
             A global schema is built from local schemas using views and it hides the real locations of data
 
     What is a parallel databse?
-        A parallel database is tored and queries across multiple machines for the sake of Performance
+        A parallel database is stored and queried across multiple machines for the sake of Performance
         Speeds up online transaction processing and online analytical tasks
         What is the most common architecture it uses?
             Shared nothing architecture
@@ -242,7 +242,7 @@
         Online processing of customer/user requests
 
     What is stream processing?
-    Processing and operatin on data as it arrives
+    Processing and operating on data as it arrives
 
     What are the 4 big Vs of big data?
         Volume (amount of data), veracity (accuracy), variery (amount of different forms) and velocity (speed it arrive)
@@ -394,7 +394,7 @@
         Dont try to build ACID yourself
         Look for admin simplicity
         High level languages are good
-        Open source is good
+        Open source is good -> vendor locking
         Look for shared nothing architecture
         Pay attention to node performance
         Avoid multi node operations
@@ -483,3 +483,29 @@
 
 
      
+
+     Part II: Example “Essay”
+a) In relation to the MapReduce programming model, is it possible to start the
+execution of reducers while mappers are still running? Why or why not? (2
+marks)
+b) Write Map and Reduce functions (using pseudo-code) to join two tables with
+a one-to-one relationship, whose schemas are defined in the following. Explain
+the assumptions you make.
+Schema for Table A:manager_id, m_name, dept_id
+Schema for Table B:dept_id, d_name, postcode
+The corresponding query in SQL is:
+SELECT * FROM A, B WHERE A.dept_id = B.dept_id
+(6 marks)
+
+a) No it is not possible. The collection of key value pairs that a reducer takes an an input is the direct
+output from the mapper. Therefore the reducer needs the output of all mappers, and thus cannot start until their execution#
+is complete
+
+b)
+assuming map is ran twice, once on the A table and once on the B
+map(key, value)
+    for each tuple in value
+        emit(tuple.dept_id, tuple)
+    
+reduce (key, pair)
+    emit(key, remove_duplicates(flatten(pair)))
