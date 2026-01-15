@@ -1,0 +1,485 @@
+=========== Recall notes blind - day before exam =========
+
+////////////// PART ONE //////////////////
+
+----- Week 1, Introduction (Distributed Computing Overview) ------
+
+    What is the definition of a system?
+        A system is a collection of parts which achieve a solution which is not possible by the parts or components alone. 
+        They are connected by interdependance and interaction. CORRECT
+
+    What is the definition of a distributed system? And what are the three main characteristics of them?
+        A distributed system is a system whos components (hardware or software) are physially distributed and connected by message passing.
+        The three main characteristics are they operate over a network, are physically distributed, operae concurrently and have independant clocks
+        Appears to its users a single coherent system CORRECT
+
+    What did Leslie Lamport say means you are working with a distributed system?
+        He said that if a computer you never knew existed causes your whole application to fail, then you are working with
+        a distributed system. CORRECT
+
+    What are the needs of distributed system applications?
+        Performance
+        Failure handling and fault tolerance
+        Resource management
+        manage efficiently significant data requirements CORRECT
+
+    What are the 8 fallacies of distributed computing? And what is the implications for each?
+        Latency is zero -> Use as few network calls as possible
+        The network is secure -> Build security from day one and keep it as a concern
+        The network is reliable -> redundancy
+        There is only one admin -> look for admin simplicity and build or multiple admins from day one
+        Transport cost is zero  -> info needs to be serialised
+        Topology doesnt change -> use abstraction models and dont rely on specific endpoints
+        The network is homogenous -> use standard technologies
+        Bandwidth is infinite -> compression CORRECT
+
+    What is the Latency?
+        The time taken between a message being sent and it being fully received by the target CORRECT
+
+    What is the Bandwidth?
+        The amount of data that can be transferred over a fixed period of time CORRECT
+
+    What is the formula for calculating data transfer time?
+        data transfer time = latency + (message size // bandwidth) CORRECT
+
+----- Week 2, Performance Modelling ------
+
+    What is a model? And what are they used for?
+        A model is an abstract representation which captures only the relevant parts of a system. They are used to test the 
+        behaviour of a system and answer 'what-if' questions CORRECT
+
+    What is a performance model used for, and how is it different from performance tuning?
+        A performance model is used to simulate the performance of a system,
+        it is not the same as tuning since it doesnt actually change the performance, it just models it. Tuning 
+        tries to actually improve the performance. CORRECT
+
+    What are the two main approaches to performance modelling in distributed computing?
+        The two main approaches are the analytical model which derives mathematical formulas for modelling,
+        and simulation, which includes monte carlo and discrete event simulation. CORRECT
+
+    What is discrete event simulation?
+        Randomly generates events and carries out a simulatiomn proceeding as a chronological sequence of events,
+        implying a notion of time in the simulation CORRECT
+    
+    What monte carlo simulation?
+        Generate random input and simulate what follows while checking the result CORRECT
+
+    What is the http transaction time formula?
+        t = RTT + t_req + t_siteprocessing + t_reply CORRECT
+
+    What is queing theory?
+        Applied probability
+        Queing theory models a system as a queue with a set of requests waiting to be processed, and a set of processed
+        requests leaving the system. CORRECT
+
+        What is Little's law?
+                Littles law states that in a steady system (arrival rate is the same as departure rate) the 
+                average number of requests in the system is the product of the arrival rate and the service time CORRECT
+
+    What are some of the possible performance targets in distributed systems?
+        Response time
+        Min cost
+        Min energy cons
+        Min failures
+        throughput 
+        resource utilisation
+        Trade computation with communication CORRECT
+
+    What is Amdhals law?
+        States that there is always an inherantly sequential part of a parallelisable application. CORRECT
+
+        therefore the speedup is 1 / ((1-P) + (P/N)) where P is the parallelisable portion and N is the num of machines
+        therefore the max speedup assumes N -> infinite and so is 1/(1-P) CORRECT
+
+----- Week 3, Fault Tolerance ------
+
+    What are the types of failure in distributed systems?
+        Omission failure - server fails to respond
+        Timing failure - server fails to respond within the appropriate time window
+        Respone failure - servers response is incorrect
+        Byzantine/Arbitrary failure - server behaves in an arbitrary unexpected way
+        Crash - sever halts CORRECT
+
+    What are the three types of redundancy?
+        Physical redundancy - providing additional hardware to take over in the case of failures
+        Information redundancy - additional info to ensure messages are received correctly - e.g. checksum
+        Time redundancy - sending messages multiple times to ensure they arrive CORRECT
+
+    What is the main thing that redundancy does, and what is its trade off?
+        Redundancy increases availability, but at the cost of extra hardware, and keeping things consistent CORRECT
+
+    What is caching?
+        Storing a local copy of data regularly accessed to reduce latency by needing to fetch from server repeatedly CORRECT
+
+    What is capacity planning?
+        Predicting the needed capacity to meet the expected load of a service CORRECT
+
+    What is the formula for the availability of a replicated service?
+        Availability of a single node is given by:
+            MTBF / (MTBF + MTTR)
+            where MTBF - mean time between failures, and MTTR = mean time to repair 
+
+        the probability of a single node failing is 1 - its availability
+        the availability of a service failing is 1 - the probability all replicas fail
+        the probability all replicas fail is the product of p each fails CORRECT
+
+    What are the two consistency protocols and their descriptions?
+        Strict consistency ensures that every read returns the value from the most recent write, meaning all nodes
+        are up to date with the consistent value at all times -> implies absolute time ordering CORRECT
+
+        Eventual consistency does not gauruntee this, but given sufficient time all replicas will eventually settle on A
+        consistent value CORRECT
+
+----- Week 4 + 5, Resource Management ------
+
+    What forms can resources be?
+        Resource can be hardware, software, or data CORRECT
+
+    What is meant by grid computing and what is the main method that was used to implement it?
+        Grid computing is the organisation of individual computers into a collection much like the electric grid.
+        All computers share resources, power and it is a high performance computing model.
+        It used virtual organisaton as its main way to be implemented. CORRECT
+        The grid provides:
+            Data management
+            Resource discovery
+            information collection and publishing
+            security mechanisms
+            session recording and accounting
+
+    Why did grid computing give rise to cloud computing?
+        Grid computing gave rise to cloud computing since in practice, the indiviual computer 'plug in' model was too 
+        heavyweight and needed cumbersome middleware CORRECT
+
+    What is meant by cloud computing and what is the main method used to implement it?
+        Cloud computing offers on demand resource to users, who do not own what they use. They use virtual machines over the 
+        internet rather than plugging in their own compute power. Virtualisation is used to divide up resources into 
+        seperation of concern machines that users make use of. CORRECT
+
+    What is elasticity and the two types? What is meant by each type?
+        Elasticity is the ability for a service to scale up or down on demand
+            Horizontal scales by adding more individual resources/machines
+            Vertical scales by improving the characteristics of existing resources CORRECT
+
+    What are the three cloud service models and their meanings?
+        Software as a service (SaaS) - Fully functional software to users over the cloud
+        Platform as a service (PaaS) - Development environment provided over the cloud for deploying applications
+        Infrastructure as service (IaaS) - Raw resource like storage or CPU use supplied over the cloud CORRECT
+
+    What are the goals of the cloud provider?
+        To maximise profit from the minimal resource provisioned CORRECT
+        What is the task they have to do this?
+            Virtual machine allocation to physical machines CORRECT
+
+    What are the goals of the cloud consumer?
+        To maximise the compute resource as quickly and cheaply as possible CORRECT
+        What is overprovisioning and underprovisioning?
+            When you demand too much resource for the task at hand it is overprovisioning, when you get to little it is
+            underprovisioning CORRECT
+
+    What kind of problem is virtual machine allocation?
+        A scheduling problem  CORRECT
+
+    What is a bag of tasks problem, and what are the ways you can colve it?
+        When the tasks all are independant and need indiviual scheduling across multiple machines (can be scheduled on any machine)  CORRECT
+        You can use random/round robin or shortest job first CORRECT
+        What about when we have heterogeneous tasks?
+            Schedule max time task on min completion time machine, or min time task on max completion time machine CORRECT
+        When tasks have deadines the tasks with the earliest deadlines should be scheduled first
+
+    Why would bag of tasks not work in some cases?
+        When there are task dependencies bag of tasks is not suitable CORRECT - e.g. if task B needed the output of task A to work
+        What method would we use when this is the case?
+            heterogeneous earliest finish time (HEFT): CORRECT
+                assigns priorities to each task and uses these to schedule in order of priority to earliest finish time machines CORRECT
+            What is the priority formula in this method?
+                Priority = avg(exec time) + max(priorities of children) + communication cost to the max P child CORRECT
+ 
+    What is a spot instance in cloud computing?
+        When spare/leftover resource is offered to customers at a steep discount to avoid wasted resource CORRECT
+
+    What is meant by fog computing?
+        Adding layers between the source of data and the cloud to produce/process the data before it arrives CORRECT
+
+    What is meant by edge computing?
+        When we do some computation to the data near the source of where it originates CORRECT
+        What is the difference between an edge device and an edge server?
+            An edge device is a device not purposed for edge computing - like an engine - but has some compute power,
+            and so can do some edge processing CORRECT
+            An edge server is dedicated to edge processing CORRECT
+
+    What are fog and edge computing trying to strike a balance between?
+        Amounts of data produces and the cost to transfer, store and process it all CORRECT
+
+////////////// PART 2 //////////////
+
+----- Week 6, Big Data -------
+
+    What is meant by enterprise data?
+        Enterprise data is the operational data of an organisation managed by an enterprise system, it governs the mainstream
+        tasks and analysis of the organisation
+
+    What is a distributed database management system?
+        A databse that is distributed across multiple machines and can be queried or updated from all places
+        What can it also provide?
+            Distributed transactions via the two phase commit
+
+        What is a global schema?
+            A global schema is built from local schemas using views and it hides the real locations of data
+
+    What is a parallel databse?
+        A parallel database is tored and queries across multiple machines for the sake of Performance
+        Speeds up online transaction processing and online analytical tasks
+        What is the most common architecture it uses?
+            Shared nothing architecture
+    
+    What is meant by data integration?
+        Combining data from multiple sources in such a way that reduces heterogenities
+
+    What is batch processing?
+        The offline processing of huge datasets
+
+    What is interactive processing?
+        Online processing of customer/user requests
+
+    What is stream processing?
+    Processing and operatin on data as it arrives
+
+    What are the 4 big Vs of big data?
+        Volume (amount of data), veracity (accuracy), variery (amount of different forms) and velocity (speed it arrive)
+
+    What is the extra cloud service big data brings into play?
+        Database as a service
+
+    What are the three distributed data challenges?
+        Reliability (keep working even when things go wrong), maintainability (easy for ops teams and accomodate evolution) and scalability (accomodate increasing load)
+
+    What is partitioning, what does it imply? What is partitioning also known as (in NoSQL)?
+        Partitioning is when data is distributed across multiple machines, it implies scalability, in NoSQL is is AKA
+        as sharding
+
+    What is replication, what does it imply?
+        Storing multiple copies of the same data - implie scalability and availability
+
+    What is round robin partitioning and what are its pros and cons?
+        When data is partitioned as it arrives Randomly
+        It has uniform initial distribution and is easy to rebalance
+        However accessing data gives need to look through every partition
+
+    What is key range partitioning and its pros and cons?
+        When ranges of keys (e.g 0-10) are put on one partition
+        Provides good key range access and good direct access based on key
+        But can lead to hot spots for popular keys, expensive rebalancing, uniform distr is not intrinsic
+        i.e. if the key ranges are not uniform then the partitioning wont be and it only helps for requests based on key
+
+    What is hash partitioning and what are its pros and cons?
+        When the partition is determined by a hash on the key
+        Provides uniform distr with certain keys and focused direct access based on key
+        but can have hot spots for similar keys, expensive rebalancing, no range query support and again only helps for
+        key based queries
+
+    What is partitioning by key, and what are the desirable characteristics of the chosen key?
+        When the partitions are made from the primary key
+        diverse values, not subject to skew, direct access, range access
+
+    What is skew?
+        When partitioning is uneven
+
+    What are hotspots?
+        When load is unevenly balanced
+
+    What do both skew and hotspots give rise to?
+        repartitioning
+
+    What is repartitioning?
+        Moving data from one partition to another
+
+    What is the fraction of data needing repartitioning when assuming uniform distribution and mod based partitioning?
+        1 - 1/new number of nodes
+        How can this be improved?
+            Instead of doing hash(key) = node
+            do hash(key) = partition then store a partition to node lookup table
+            this gives 1 - 1/num + 1 instead (better than before)
+
+    What is a secondary index?
+        A secondary index is an index on an object that is not used for partitioning, it prevents the need to scan objects
+        What is a local secondary index and its pros and cons?
+            When the secondary index is stored locally to partitions
+            It is good since updates are global, but not good since it must look at all partitions for queries
+        What is a global secondary index and its pros and cons?
+            Global is when it is stored the same globally
+            Updates are not global, but lookups only need to look at the single partition
+
+----- Week 8, Map Reduce -------
+
+    What is map reduce, and what does its infrastructure support?
+        Map reduce is a batch processing programming framework supporting elastic scaling, parallel execution,
+        on huge datasets on numerous machines
+
+    What does the map part do? 
+        Reads in a key and a value and returns a set of key value pairs
+
+    What does the reduce part do?
+        Reads in the collection of key value pairs output from map and applies some function to them, returning a new collection
+        of key value pairs
+
+    What does the S3 bucket store?
+        Stores the log files, the results of map reduce jobs, and the actual map reduce programs 
+
+    Can you write psuedocode for a word count map reduce application?
+        def map(document id, document value)
+            for word in document value:
+                emit(word w, 1)
+
+        def reduce(word w, list counts)
+            sum = 0
+            for count in counts:
+                sum += count
+            emit(word w, sum)
+
+    What are buckets in elastic map reduce?
+        They are essentially folders
+
+    What is elastic map reduce?
+        Amazon web services map reduce application deployed on a cluster or managed service in the cloud
+
+    What is a job?
+        A job is a unit of work to be performed
+
+    What is a split?
+        A section of the input
+
+    What is a task?
+        A run of map reduce on a split
+
+    What is a task tracker?
+        Keeps track and coordinates the tasks
+
+    What is a job tracker?
+        Keeps track and coordinates the jobs
+
+    What are map reduce patterns?
+        A pattern is a template for solving and general data manipulation task in map reduce
+        What is a summarization pattern?
+            Reduces the amount of data sent from map to reduce by summarizing maps result in some way
+        What is a combiner?
+            An optional reducer ran locally to the map which summarises the result (in Hadoop)
+        What is a filtering pattern?
+            Discards some of the input from map to reduce - i.e. remove any word counts <2
+        What is an inverted index pattern?
+            Provides an index from the document contents to the document id
+        What is a join pattern?
+            Implements a relational join
+
+------ Week 10, NoSQL ------
+
+    What are the two main things NoSQL is associated with?
+        Simple operations and elastic scalability
+
+    What are the 6 characteristics of NoSQL databases?
+        Horizontal scaling of throughput over many servers
+        Expose simple call level interface
+        replicate and distribute data over servers
+        Less strict transaction gauruntees
+        Cope with variation in object structure
+        Use distributed indexes efficiently
+
+
+
+    What are the three types of NoSQL database?
+        Key value - access or update a value using a key
+        document - access or update a document using a key, DB provides functionality for accessing values
+        Wide column - update or access a collection of column families associate with a key
+
+    What are the ten stonebraker cattle rules?
+        Dont try to build ACID yourself
+        Look for admin simplicity
+        High level languages are good
+        Open source is good
+        Look for shared nothing architecture
+        Pay attention to node performance
+        Avoid multi node operations
+        Online everything
+        High availability and automatic recovery is essential
+        Carefully leverage main memory databases
+
+    What are the costs/benefits of replication?
+        Costs are the finance to add replicas, need to keep the consistency, benefits are availability, nodes are
+        closer to users, and queries can be distributed across nodes
+
+    What is ACID consistency?
+        Atomicity, Consistency, Isolation, Durability
+
+    What method do centralised transactions use for consistency?
+        Two phase locking
+            Read = shared lock
+            Write = exclusive lock
+
+    What method to distributed transactions use for consistency?
+        Two phase commit
+            Phase 1 - propose commit, if all pts say ready then send commit msg to all nodes, if not abort
+            Phase 2 - all commit or all abort based on the message
+
+    What requests do leader and follower nodes receive?
+        Leader recieves update and read requests
+        Followers only recieve read requests
+
+    What is synchronous replication?
+        When the system returns success when all replicas are successfully updated
+        Asynchronous?
+            returns success without knowing
+        Semi synchronous?
+            When atleast one updates successfully
+
+------ Week 11, Streaming Data -------
+
+    What are streaming operations?
+        Operations which act on data as it arrives
+
+    What is a data stream?
+        An endless sequence of data items made available over time
+
+    What is meant by stateful operations and what is an example of a stateless stream operation?
+        Stateful operations are those that need knowledge on what items have come before, stateless do not - e.g. filtering
+
+    What are the three types of stream applications?
+        Data pipelines, Streaming Analytics, Event Driven
+
+    How can processing streams be represented as a dataflow graph?
+        Sources are sensors, other dataflow nodes, or message queueues
+        Intermediate operations have one or serveral inputs and outputs generic or app specific
+        Sinks can be other applications or data stores
+
+    What are the four ways data flow can exchange?
+        Broadcast, forward, random, key based
+
+    When would we care about latency? And when would we care about throughput?  
+        Latency when we have strict timing requirements on operations, throughput when we expect times of peak load
+
+    What is a tumbling window?
+        A non overlapping window of fixed length
+
+    What is a sliding window?
+        A fixed length, overlapping window defined by its length and its slide
+
+    What is a count based tumbling window?
+        Tumbling window that defines how many events need to be recieved before the window is ready for processing
+
+    What is a session window?
+        Window storing events which occur within a gap of eachother
+
+    What is event time, and what is processing time?
+        Event time is when it happened in real life, processing time is the time of the machines clock when it becomes 
+        aware of the evnt
+
+    What is a watermark? What is a loose one and a tight one?
+        Trades off between latency and completeness by adding delays before windows are processed to account for delays event arrival
+        Tight - short so is timelym but can miss events
+        Loose - long so it complete and accurate but takes longer
+
+    What gauruntees can stream systems provide about how many times event will be processed?
+        At most once - each event is processed at most once
+        at least once - each event is processed at least once - needs ability to eplay events from source to buffer
+        exactly once - needs replay and transaction like state management
+
+
+     
