@@ -1,0 +1,73 @@
+============== AI and Games Key Terms (non exhuastive)================= 
+
+Definition of a game formally:
+
+Payoff 
+
+Perfect information 
+Imperfect information
+
+Zero sum
+
+Nature node
+
+Fully specified strategy
+
+Pure strategy
+
+Normal form
+
+Infinite plays 
+Infinite choices 
+
+Zermelos theorem
+
+Nash equilibrium 
+
+Best response
+
+Winnig Strategy
+
+Equilibrium
+
+Saddle point 
+
+Value of a game 
+
+Optimal strategy 
+
+Mixed strategy 
+
+Nash' theorem 1950 - every game with finitely many pure strategies for each player has at least one mixed strategy equilibrium point
+
+Dominated strategy
+
+Alpha
+
+Beta
+
+Evaluation function
+
+Exploration
+
+Exploitation
+
+Multi armed bandit
+
+    Action value
+    Regret
+    Total regret
+    Count
+    Gap
+
+Selection
+Expansion
+Simulation
+Backpropagation
+
+
+
+
+
+
+

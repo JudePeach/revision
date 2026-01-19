@@ -1,0 +1,166 @@
+==================== Enterprise Management Key Terms ======================
+
+PESTLE - External/Macroeconomic analysis tool - Political, Economical, Social, Technology, Legal, environmental
+
+Porters 5 Forces - Industry/micro analysis tool - 
+    Threat of new entrants
+    Threat of substitution
+    Bargaining power of suppliers
+    Bargaining power of buyers
+    Competitive rivalry
+
+Entry barriers - challenges to entering a market:
+    Economies of scale - proportionate saving in costs for increasing production levels
+    Capital/monetary requirements
+    Access to distribution channels
+    Experience
+    Expected retaliation
+    Legislation
+    Differentiation - making a product stand out from its competitors
+
+Threat of substitute products - reduces demand for a class of products
+    Product for product - swapping one product for a different one - e.g. using email instead of real material
+    generic substitution - spending your money on something other than the product - e.g. going on holiday instead of buying a new phone
+    Substitution of a need or benefit - need or benefit changes - for example repair services, the need is not always there
+
+Bargaining power of buyers - when buyers have the power in the market
+    This happens when they buy lots of volume, have low costs for switching suppliers, there are lots of suppliers,
+    and alternative sources of supply
+    Threat of backward integration - moving back up the spply chain - for example if a manufacturer buys the supply company
+    Threat of forward integration - moving down the supply chain - manufacturer buys a retailer of their product
+
+Bargaining power of supplier is just the opposite
+
+Marketing - the management process responsible for identifying, anticipating and satisfying customer requirements profitably
+
+Customers  - the sole purpose of a business is to create and retain customers
+
+When customers buy - when the perceived value of your product is worth more to them than the money in their pocket
+
+Three Ms:
+    Market demand - is it something people want?
+    Market structure - can you get an offering into the marketplace, and will people choose it over the other options?
+    Market analysis - can you get it to the customer while still making a profit?
+
+7 Ps of marketing:
+    Product, price, place, promotiom, people, process, physical evidence
+
+Brand - easily identified concept - easily remembered name, simple logo or brand message, identifiable + desirable attributes for the customer
+
+Product differentiation explains what is special about the product - brands are worth more than product differentiation
+
+Factors of brand personality - Sincerity, excitement, competence, sophistication, ruggedness
+
+Promotion creates awareness of offering with an appropriate message to trigger interest
+
+Segmentation - dividing a potential market up geographically, economically, demographically, lifestyle factors etc
+    An example:
+        The apple watch has titanium or silver/gold versions for high economy Customers
+        It also has a sport version for sporty lifestyle people
+        It also has a cheaper version with less features for lower economy customers
+    
+Targeting - focusing on a particular segment of the market - for example the Whoop band focues serious health fanatics in the fitness group, it doesnt even have a built in screen!
+
+Positioning - strategy and product perception
+
+Cost leadership competes on price, differentation competes on quality
+
+Strategic capability - ability of a company to perform at the level required for success via their resources and competencies
+
+Resources - resources that a company owns or can access to support its strategies
+
+Competencies - what can your resources do and at what level?
+
+Value chain analysis describes the seperate activities and analyses in terms of efficiency, effectiveness and coordination
+
+Stars - high market share and high market growth
+    products that perform strongly in fast growing markets
+Cash Cows - High market share and low market growth
+    Products that are well established in mature markets
+Question marks - Low market share and high market growth
+Dogs - low market share and low market growth
+    weak market positions in slow growing markets
+
+SWOT - strength weaknesses opportunities threats
+
+Intellectual property - the various rights which protect you ideas or other forms of intellectual creation
+
+Patent - duration limited territorial monopoly granted by government in return for public disclosure of new and
+innovative products. They protect the application of such ideas
+Gives you the right to prevent a 3rd party from using it, but not the right to us emit
+
+Novelty - not found in a single document elsewhere
+Innovative step  = idea shouldnt be apparent to an individual of ordinary ability practiced in the specific technology
+
+Copyright - gives rights to the creator of a certain type of material
+Not a registred form of protection, is automatic when work is made
+Protects artistic work, literary work, drmama, audio or video
+infringement is a criminal offence
+
+Design - the external appearance of a product and features of its 3D shape and patterns/orientation in 2D
+Registered design - New product designs having individual characters, must be new, never previously available and 
+'individual in character'
+Active for periods of 5 years, up to 25 years
+
+A design right is a non registered form of protection against copying, weaker than design registration, it is not
+a monopoly right, and has 10 year duration
+
+A trade mark governs words, signs or graphics that distinguish a product or service, customers can identify the product
+or service easily
+Can last forever but must be renewed every 10 years
+
+Know how is technical info, knowledge or skill, must be a secret, can be extremely valuable and can only be protected
+by confidentiality agreements. For example - coca cola secret ingredient
+
+Database rights protect collections of works or data, no ned to register and lasts 15 years
+
+Geographical indications identify a good as originating in the territory of a member, or a region in that territory,
+where has a given quality, reputation or other characteristics of the good is essentially attributable to its
+graphical origin - e.g. Tequila or Champagne
+
+Marketing research links an organisation to its market by gathering information that enables a company to identify 
+market driven opportunities, refine and evaluate marketing actions and monitor overall marketing performance
+    A form of social science
+    Trying to make meaning by interpreting data from a number of sources
+
+Knowlegde is at the top of the pyramid, and is based on interpretations (middle), the data is the bottom of the pyramid
+
+Marketing research is used for future demand forecasting, analysing competitors, analysing opportunities for markets or companies
+Also used for analysing potential of new market areas, identifying and evaluating markets for products and new products,
+and sales forecasting
+
+The customer challenge - customers dont often act as we expect
+
+Type of research data:
+    Secondary research - research that you have not carried out yourself, you just use the results (existing data)
+    Primary research - data that you have gathered from your own research/testing
+    Qualitative and quantitative
+
+Primary data collection:
+    Observation
+    Surveys
+    Content analysis
+
+Business model - method for doing business by which a venture can generate revenue. Answers who the customers are and what
+do they value?
+
+Value proposition - the proposal of value to the customer by the company    
+    Description of the bundle of the products and services that create value for the specific customers segments
+
+Osterwalder's business model canvas:
+    Key partners, key activities, value proposition, customer relationships, channels, customer segments,
+    key resources, cost structure, revenue streams
+
+Business model environment forces:
+    Industry forces, macro economic forces, market foces and driving trends
+
+Types of busines model:
+    Resource driven - originate from existing infrastrcture/partnerships to expand or transform business model
+    Offer driven - creates a new value propositions that affect other business model building blocks
+    Customer driven - Based on customer needs, facilitated access, or increased convenience
+    Finance driven - driven by new revenue streams, pricing mechanisms, or reduced cost structure that affect
+    other business model building blocks
+    Multiple epicentre driven - driven by multiple epicentres that can have significant impact on multiple other building blocks
+
+
+    

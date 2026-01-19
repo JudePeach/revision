@@ -1,0 +1,133 @@
+========== AI and Games Revision Recall Notes ==============
+
+---- What Is A Game? -----
+What are the three things that a game tree requires?
+
+What do each of the following represent: leaves, root, nodes and edges?
+
+What do game trees fail to represent/capture?
+
+What is meant by imperfect information?
+
+How do we handle chance, imperfect info, and simultaneous moves in game trees?
+
+What is a zero sum game?
+
+----- Strategy -----
+What is a fully specified strategy?
+
+What is a pure strategy?
+
+What is the method for finding all strategies when: player is making the first move, and when the player is not making the first move?
+
+#TODO: What is the overspecification issue?
+
+#TODO: What is the solution for the overspecification issue?
+
+----- Normal Form Of A Game ------
+How do we represent games which dont involve chance in normal form?
+
+How do we represent games which involve chance in normal form?
+
+------ Extensive vs Normal Form ------
+What are the advantages and disadvantages of extensive form?
+
+What are the advantages and disadvantages of normal form:
+
+When do we use normal form, and when would we instead use extensive form (game tree)?
+
+What is the difference between infinite plays and infinite choices?
+
+What is Zermelo's theorem?
+
+----- Best Responses (Equilibria) In Zero Sum Games --------
+What is a best response?
+
+What is meant when a  player has winning strategy?
+
+What is a nash equilibrium?
+
+What is a sub game equilibrium point?
+
+#TODO: For every 2 player zero sum game of complete info without chance and with payoffs (-1, 0, 1), exactly one of the following holds:
+
+#TODO: What is the problem/assumption with best responses?
+
+------- Equilibria In Non Zero Sum Games --------
+What are the alternative approaches to equilibria here?
+
+----- Equilibria In 2 Person Zero Sum Games (Normal Form) -------
+What makes a strategy an equilibrium in normal form?
+
+Shortly explain the minimax theorem:
+
+What is a saddle point?
+
+What is the value of a game?
+
+What is an optimal strategy?
+
+#TODO: Every 2 person zero sum game of perfect information with finite players has:
+
+----- Mixed Strategies -----
+What is a mixed strategy?
+
+How do we evaluate mixed strategies?
+
+------ Equilibria With Mixed Strategies ------
+#TODO: Does the definition of nash equilibrium stay the same or change for mixed strategies?
+
+KEY THEOREM: Every game with finitely many pure strategies for each player has at least one:
+
+What does it mean for a strategy to be dominated, and what does it imply if so?
+
+------ Minimax Algorithm -----
+What are the two ways to calculate the value?
+
+#TODO: For non zero sum games the value:
+
+#TODO: Does the minimax algorithm directly apply to games of imperfect information?
+
+----- Alpha Beta Pruning ----
+What do the values of alpha and beta start as at the root?
+
+What does alpha represent and when is this bound updated?
+
+What does beta represent and when is this bound updated?
+
+We prune when alpha is greater than or equal to beta
+
+----- Evaluation Functions ------
+When are evaluation functions used?
+
+What does an evaluation function do?
+
+What is the standard approach for calculating an evalution function?
+
+------ Learning In Games -----
+When is learnig preferred over methods like minimax?
+
+Why is learning hard?
+
+#TODO: What is exploration and exploitation?
+
+What is a multi armed bandit?
+
+#TODO: What is the action value?
+
+What is Regret?
+
+#TODO: What is the count? What is the gap? What does a good algorithm have?
+
+What is the upper confidence bound?
+
+SEE WRITTEN LECTURE NOTES FOR FORMALISATIONS
+
+------ Monte Carlo Tree Search (MCTS) ------
+What are the four phases of MCTS and briefly describe each one:
+
+What is a tree policy and what is the standard one in MCTS?
+
+What are the two approaches ot backpropagation?
+
+What are the four possible ways of choosing the next best child to explore?

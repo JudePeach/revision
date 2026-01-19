@@ -37,6 +37,10 @@ What is the method for finding all strategies when: player is making the first m
 	When the player is making the first move we add all of the possible strategies
 	When the player is not moving first we times all the possible strategies
 
+#TODO: What is the overspecification issue?
+
+#TODO: What is the solution for the overspecification issue?
+
 ----- Normal Form Of A Game ------
 How do we represent games which dont involve chance in normal form?
 	When games dont involve chance we just enumerate all strategies and build payoff tables from this
@@ -45,6 +49,15 @@ How do we represent games which involve chance in normal form?
 	When games involve chance we use the expected payoff which is the weightd average of the leaf payoffs
 
 ------ Extensive vs Normal Form ------
+What are the advantages and disadvantages of extensive form?
+	It is more compact for large games, dynamic generation is possible, closer mimics actual play,
+	and models learning better
+	But it has a complex structure and reasoning is cumbersome
+
+What are the advantages and disadvantages of normal form:
+	Good for stratified decisions, easy payoff computations, well studied theory, simples structure
+	But it can be enormous, may not be computable, and is un natural for modelling
+
 When do we use normal form, and when would we instead use extensive form (game tree)?
 	We use normal form when the game is small enough to enumerate and we want to carry out equilibria analysis, but we use extensive form when the game is too large, and modelling actual play or learning is repeated many times
 
@@ -70,6 +83,10 @@ What is a nash equilibrium?
 What is a sub game equilibrium point?
 	A tuple of fully specified strategies, one per player, such that the tuple gives an equilibrium point for each sub game
 
+#TODO: For every 2 player zero sum game of complete info without chance and with payoffs (-1, 0, 1), exactly one of the following holds:
+
+#TODO: What is the problem/assumption with best responses?
+
 ------- Equilibria In Non Zero Sum Games --------
 What are the alternative approaches to equilibria here?
 	System level analysis - looking at stable staes for populations of agents
@@ -79,6 +96,8 @@ What are the alternative approaches to equilibria here?
 ----- Equilibria In 2 Person Zero Sum Games (Normal Form) -------
 What makes a strategy an equilibrium in normal form?
 	If it is maximal in its column and minimal in its row
+	What is the strategy to find equilibria here?
+		Check each entry in the table to see if it is simultaneously a row min and a column max
 
 Shortly explain the minimax theorem:
 	For the minimising player their best choice of moves in normal form will be the minimum of the column which is the maximal choice for the other player. This works the same for the other, maximising player, whose best move will be the maximum choice out of the row which is the minimal choice for the other player. This means that if minmax = maxmin, then there is an equilibrium point
@@ -87,7 +106,12 @@ What is a saddle point?
 	A saddle point is when a point is maximal of one axis, while also being the minimal of the other axis
 
 What is the value of a game?
-	The value of a game is the unique gaurunteed payoff at any equilibrium point
+	The value of a game is the unique gaurunteed payoff at any equilibrium point. +V is the highest payoff Player 1 can gauruntee,
+	-V is the highest payoff player 2 can gauruntee
+
+What is an optimal strategy?
+
+#TODO: Every 2 person zero sum game of perfect information with finite players has:
 
 ----- Mixed Strategies -----
 What is a mixed strategy?
@@ -97,8 +121,10 @@ How do we evaluate mixed strategies?
 	We use the expected payoff to evaluate them
 
 ------ Equilibria With Mixed Strategies ------
-Every game with finitely many pure strategies for each player has at least one:
-	Mixed strategy equilibria
+#TODO: Does the definition of nash equilibrium stay the same or change for mixed strategies?
+
+KEY THEOREM: Every game with finitely many pure strategies for each player has at least one:
+	Mixed strategy equilibrium point
 
 What does it mean for a strategy to be dominated, and what does it imply if so?
 	A strategy is dominated if all other lpayers choices lead to payoffs >= the payoff of the strategy. It implies that rational players would never play a dominated strategy, and so we can remove them from game representations. We must pay attention to the order we remove strategies however
@@ -107,6 +133,10 @@ What does it mean for a strategy to be dominated, and what does it imply if so?
 What are the two ways to calculate the value?
 	The first way is depth first where we calculate the value from root to leaf, recursively exploring the sub trees, calculating the value for each, passing it back up to the root
 	The other way is bottom up here we start at the leaves and apply minimax ot the parents, doing the same to work up to the root
+
+#TODO: For non zero sum games the value:
+
+#TODO: Does the minimax algorithm directly apply to games of imperfect information?
 
 ----- Alpha Beta Pruning ----
 What do the values of alpha and beta start as at the root?
@@ -138,11 +168,17 @@ Why is learning hard?
 	Learning is hard since it has to make online decisions (learn during play), games tell us when we go wrong, but not why/how we did
 	Online decisions involve balancing between exploitation and exploration
 
+#TODO: What is exploration and exploitation?
+
 What is a multi armed bandit?
 	A multi armed bandit is a formulation for one step decision making
 
+#TODO: What is the action value?
+
 What is Regret?
 	The regret is the opportunity loss for one step. Maximising cumulative reward is the same as minimsing total regret
+
+#TODO: What is the count? What is the gap? What does a good algorithm have?
 
 What is the upper confidence bound?
 	The upper confidence bound is an estimate of an upper confidence for each value
