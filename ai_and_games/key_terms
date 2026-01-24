@@ -1,69 +1,82 @@
 ============== AI and Games Key Terms (non exhuastive)================= 
 
 Definition of a game formally:
+    Finite set of players (agents)
+    Numerically described game outcomes (payoffs)
+    Clearly defined set of rules
 
-Payoff 
+Payoff - outcome of a game numerically described as the reward for the player based on the outcome
 
-Perfect information 
-Imperfect information
+Perfect information - when players know which node they are in on the game tree given the game state. This happends when the information sets have size one
 
-Zero sum
+Imperfect information - the opposite of perfect information, meaning players do not know where in the game tree they are based on the game state
 
-Nature node
+Zero sum - when the sum of all payoffs at the leaf nodes sum up to 0, meaning that each player gets equal rewards for winning
 
-Fully specified strategy
+Nature node - a node where it is neither players turn, this node is added when games involve chance, they handle chace by having edges labelled with the corresponding probability of each action being taken
 
-Pure strategy
+Fully specified strategy - defines the same action that is taken for all nodes in the same information set
 
-Normal form
+Pure strategy - A subtree of a game tree where the root belongs to the strategy, whenever it is player i's turn,
+    exactly one of the available moves belongs to the subtree, for all nodes in the same info set for player i the 
+    same action is chosen
+    Whenever it is not player i's turn,  all available moves belong to the information set
 
-Infinite plays 
-Infinite choices 
+Normal form - A representation of a game, using payoff tabels rather than trees. Each players strategies are enumerated and all possible payoffs for combinations of player + opponent strategy are found. Then they are written to a payoff table
 
-Zermelos theorem
+Infinite plays - when one play through a game continues forever
+Infinite choices - when one state has infinite number of choices of actions
 
-Nash equilibrium 
+Zermelos theorem - in a two person zero sum game, without chance, with perfect information, an finite plays, exactly one of the following holds:
+    Player 1 has a winning strategy, player 2 has a winning strategy, or both players have strategies ensuring a draw
 
-Best response
+Nash equilibrium - when all players are playing sumultaneous best responses to eachother, meaning no player can benefit from invariantly changing their strategy
 
-Winnig Strategy
+Best response - A strategy which gauruntees a payoff larger than or equal to all other strategy choices, for all opponent actions
 
-Equilibrium
+Winning Strategy - a player has a winning strategy if their strategy is a best respone to all other players strategies
 
-Saddle point 
+Equilibrium - 
 
-Value of a game 
+Saddle point - when an entry is minimal in one direction and maximal in the other direction/axis
 
-Optimal strategy 
+Value of a game - the best payoff that one player can gauruntee. If it is a zero sum game, then the value of the game for player 1 is the +v, and -v is therefore player 2's value of the
 
-Mixed strategy 
+Optimal strategy - a strategy that appears in a n equilibrium is an optimal strategy
+
+Mixed strategy - At each action point the move for the strategy is picked from a porobability distribution,  we evaluate mixed strategies using expected payoffs
 
 Nash' theorem 1950 - every game with finitely many pure strategies for each player has at least one mixed strategy equilibrium point
 
-Dominated strategy
+Dominated strategy - A strategy is dominated if every other strategy has a payoff greater than or equal to its own, for each of the possible opponent moves, you can remove dominated strategies in normal form representations because no rational player would ever choose to play them, but removal order matters
 
-Alpha
+Alpha - the lower bound value, representing the best possible payoff that the maximimsing player can gauruntee so far, it starts at -inf and is updated at maximising nodes only
 
-Beta
+Beta - the upper bound value, representing the best possible payoff that the minimizing player can gauruntee so far, it starts at +inf and is updated at minimizing nodes only
 
-Evaluation function
+Evaluation function - An evaluation function estimates (assigning a numerical score) how good a current game state is without playing to the terminating stage of the game. This is used when game trees are too large to completely search. The standard way to compute this is using the weighted sum
 
-Exploration
+Exploration - picking a non optimal action to learn more about potential optimal moves
 
-Exploitation
+Exploitation - picking the move that looks the best given all the current knowledge
 
 Multi armed bandit
 
-    Action value
-    Regret
-    Total regret
-    Count
-    Gap
+    Action value - the mean reward for taking action a
+    Regret - the opportunity loss for one time step
+    Total regret - the total opportunity loss, minimising total regret == maximising total reward
+    Count - the expected number of selections for action a
+    Gap - the difference in value between the action a and the optmal action a*
 
-Selection
-Expansion
-Simulation
-Backpropagation
+Selection - choosing the next action to explore
+Expansion - adding this node to the partial tree
+Simulation - playing the game to completion
+Backpropagation - updating the statistics of nodes
+
+Max child - picking the child with the best/highest reward
+Robust child - picking the child most often visited
+Max robust child - picking the child both maximal in rewards and visited
+Secure child - picking the child that maximises the lower confidence interval
 
 
 

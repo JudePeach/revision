@@ -1,0 +1,319 @@
+=============== Sample Exam Question Explanations ======================
+
+Question 1:
+    a) Given definitions for the following terms:
+
+        i) A game (In the context of this course.)
+        (2 marks)
+            Remember from the notes, a game is defined by three main parts:
+                A finite set of players, known as 'agents' formally
+                A clearly defined set of rules for the game
+                A set of outcomes which can be described numerically by payoffs.
+                For it to be a game, the actions other players take must impact the other players in the same game.
+
+        ii) Nash equilibrium (2 marks)
+            A nash equilibrium is when all players in the game are playing simultaneous best responses to one another's 
+            strategies. This means that no player can achieve a better outcome by changing their strategy unilaterally.
+            All players are playing optimally.
+
+            Also remember the definition of a best response - a strategy which achieved better than or the same payoff
+            than all other strategies, in all cases of the opponents choice.
+
+        iii) Mixed strategy (2 marks)
+            A pure strategy is when the same action is chosen for nodes (game states) in the same information set. This
+            basically means for all game states that are indistinguishable, the same move is taken. Therefore a mixed
+            strategy is when the action is chosen from a probability distribution of actions.
+            We evaluate strategies using the expected payoffs, which are the sum of payoffs, weighted by the probability
+            of said action being taken.
+        
+    b) You have learned an important theorem which states,
+    under certain conditions one of the following is true:
+    Player 1 can force a win; or Player 2 can force a win; or
+    both players can force a draw. State all of the necessary
+    conditions to make this true (4 marks)
+
+        This is directly referring to Zermelos theorem. Zermelos theorem states:
+            In a two person, zero sum game, not involving chance, of perfect information, with finite plays, exactly
+            one of the following holds:
+                Either player 1 has a winning strategy, player 2 has a winnig strategy, or both players have strategies
+                ensuring a draw.
+
+        Therefore we just need to extract the conditions from this definition:
+            2 player
+            Zero sum
+            No chance
+            finite
+            perfect information
+
+    c) Consider the game Nim-5 which starts with 5 matches.
+    Each player in turn can take one, two or three matches.
+    Whoever takes the last match loses. Solve this game.
+    What level of solution is it? (5 marks)
+
+        There are three levels of solution to games:
+            Strongly solved - from any point in the game, a strategy is known which causes
+            a win for player 1, win for player 2, or a draw
+            
+            Weakly solved - It is known which player can force a win or that both can force a
+            draw, and the strategies achieving this are known, but only from the standard start of the game
+
+            Ultra-weakly solved - It is known which player can force a win or that both can force a draw, but the
+            strategies which achieve this are unknown
+
+        The game of nim 5 has a first player disadvantage for optimally playing players.
+        This means that player 2 has a winning strategy:
+            if player 1 takes 1 match, player two takes 3 -> win
+            if player 1 takes 2 matches, player two takes 2 -> win
+            if player 1 takes 3 matches, player two takes 1 -> win
+            therefore player 2 can gauruntee a win in all cases of player 1s choice
+
+        This strategy is known from every possible position that occurs - just copy the above rules
+        Therefore this fits the definition of a strongly solved game,
+        and so the game of nim 5 is strongly solved.
+
+    d) See notes for the example, but these are the questions:
+        i) Find a Nash equilibrium. Express it as a tuple (S1, S2)
+        where S1 is the strategy for Player 1, and S2 is the
+        strategy for Player 2. Define what you mean by
+        each strategy. (2 marks)
+            
+            To find a nash equilibrium we need to analyse the best responses for each player,
+            and see if any are simultaneous best responses to one another:
+
+            for player 1 (maximising) their best response for when player 2 takes a, is A to get a payoff 1
+            when player 2 plays b, their best response is B, payoff 2
+
+            for player 2 (minimising) their best response when player 1 plays A is b, payoff -1
+            and whe player 1 plays B, is a, payoff -1
+
+            As seen above, no simultaneous best responses exist, meaning there is no pure strategy equilirbia
+
+            so lets find a mixed strategy one
+
+            Player 1:
+                let play A with p = x, B with p = 1-x
+                E(A) = 1(y) + -1(1-y) = 2y - 1
+                E(B) = -1(y) + 2(1-y) = -3y + 2
+
+                2y - 1 = -3y + 2
+                5y = 3
+                y = 3/5
+            Player 2:
+                let play a with p = y, b with p = 1-y
+                E(a) = 1(x) + -1(1-x) = 2x - 1
+                E(b) = -1(x) + 2(1-x) = -3x + 2
+                again x = 3/5
+            
+            using the x and y values found above:
+                Player 1 plays A with p = 3/5, B with p = 2/5
+                Player 2 plays a with p = 3/5, B with p = 2/5
+
+        ii) Show that what you found in the previous part is a
+        Nash equilibrium. (3 marks)
+
+            To show it is an equilibrium, we need to prove th payoffs are the same for each player,
+            so lets just use the formulas we derived earlier but plug in the values we found:
+
+                player 2
+                E(a) = 1(3/5) + -1(2/5) = 0.2
+                E(b) = -1(3/5) + 2(2/5) = 0.2
+                0.2 = 0.2
+
+                player 1
+                E(A) = 0.2
+                E(B) = 0.2
+                0.2 = 0.2
+            Explain:
+                if player 2 plays mixed strategy y = 3/5, player 1 gets payoff 0.2 for both of their strategies,
+                meaning that they have no incentive to change strategy.
+                same for if player 1 plays mixed strategy x = 3/5, player 2 gets payoff 0.2 for both of their strategies,
+                and so also has no incentive to change strategy
+
+                Since both have no incentive to change their stratagies, this is a nash equilibrium
+
+Question 2:
+    (a) Each player puts £1 into the pot.
+    (b) Each player flips a different fair coin, observes the
+    outcome heads (H) or tails (T), and keeps it hidden
+    from its opponent.
+    (c) Player 1 can bet or fold.
+    i. If Player 1 folds, the game ends and Player 2 gets
+    the pot.
+    ii. If Player 1 bets, Player 1 must put an additional
+    £1 in the pot.
+    (d) If Player 1 bet, then Player 2 can bet or fold.
+    i. If Player 2 folds, the game ends and Player 1 gets
+    the pot.
+    ii. If Player 2 bets, Player 2 must put an additional
+    £1 in the pot
+    (e) If both players have bet, there is a showdown.
+    i. Heads beats tails and gets the pot.
+    ii. In the case of two heads or two tails, it is a draw
+    and the pot is split evenly between the two players.
+    
+    a) Draw the game tree for this game. Indicate the information
+    sets for each player by drawing a box around the nodes
+    in the same information set, or connect them by labeled
+    lines. (8 marks)
+
+        See notes for the game tree
+
+        The info sets will be, for player 2 - tails will be in the same info set, before they got tails
+        player 1 could have H or T and player 2 does not know (two diff nodes, same info set)
+        Exact same reason, both heads nodes are in the same info set
+
+        Then for player 1 the bet nodes will be in the same info sets, they are diff nodes, but indistinguishable
+        since player 1 has no clue what player 2 got on their coin flip
+
+    b) What action should Player 1 take when its coin is Heads?
+    Why? (One word answer is possible.) (2 marks)
+
+        When player 1 gets heads, they should always bet, no matter what player 2s coin is, and no matter
+        what action (bet or fold) that player 2 takes, player 1 will not get a negative payoff, they either
+        win no money, or win money (win win situation)
+
+        Formally the reason for this is known as dominance - lines up with definition obviously!
+
+    c) What action should Player 2 take when Player 1 has bet
+    and Player 2’s coin shows Heads? Why? (2 marks)
+
+        Player 2 should always bet as this gauruntees payoffs of 0 at worst, -2 at best, better than if you fold which is only -1
+        Again the formal reason for this would be known as dominance
+
+Question 3:
+    a) When machine learning is applied to games, reinforcement
+    learning is more commonly used than supervised learning
+    or unsupervised learning. Why? (3 marks)
+
+        Supervised learning needs lots of examples of games played before with their outcome also.
+        Games often have exponential branching factors and therefore have huge amounts of possible outcomes.
+        This means that it is very hard to get a representative set of training examples
+        Supervised learning also needs labels for wins and losses, which are only possible with terminal states,
+        not other non terminal nodes.
+
+        Unsupervised learning pays no attention to the payoff of the games - which are key in game playing since
+        they determine who wins.
+
+        However reinforcement learning can learn on line during player, and it has a natural win and losses
+        recognition. It also uses self play so does not need lots of training data.
+        
+    b) Given a state S and action from that state A, what property
+    of S and A will Q(S, A) converge to under Q-learning?
+    (4 marks)
+
+        Q is the action value if you look at the lecture notes. The action value is the mean
+        reward for taking an action. Under Q learning the action value tends toward the optimal action value
+        which is the expected, discounted, future reward value.
+
+        the action is chosen according to the action from this:
+            at = argmaxQ*(s, a)
+
+    c) Figure 1 below shows a 2 × 2 Hex game where Player 1
+    Red has already made an opening move. Player 2 Blue
+    has a well-trained Q-table which Blue will use to make
+    its next move. What values are in the Q-table for each
+    of the three possible moves that Blue can make next.
+    (3 marks)
+    i. Cell b1
+    ii. Cell a2
+    iii. Cell b2
+
+    Remember how the game of hex works, there are two colours, red and blue, one is horizontally connected
+    and one is vertically connected. Therefore connecting the colours would be a win (+1), and not connecting them would not be a win
+
+    in the figure the red is the top and bottom, and blue is left and right.
+
+    from the perspective of blue, taking move b1, leaves a connecting cell open and so
+    red can immediately win if the player is playing optimally. So the q value from the table would be the discount factor 
+    represented by: γ
+        Discount factor - expected future reward
+        it is not 1 here since it is a future move, not a straight away one
+
+    taking move a2 prevents red from immediately having a winning move, and also blue has a connecting move regardless, so the value
+    would be +1
+
+    taking move b2 again leaves an immediate winning cell to red so is -1
+
+    d)
+    Consider the following immediate-reward reinforcement
+    learning situation.
+        • At time t, the environment puts the agent into state
+        St .
+        • The agent then choses an action At .
+        • The environment provides a reward rt , where the
+        reward received is a deterministic function of the
+        action taken and the state from which the action was
+        taken, r = R(S, A).
+        • There are a finite number of states and from each
+        state there are a finite number of actions.
+        • Over a very long time, every state-action pair gets
+        used very many times.
+
+        Learning in this scenario uses the following tabular, immediate
+        reward Q-learning algorithm shown in Equation 1.
+        Q(St , At ) ← Q(St , At ) + α [rt − Q(St , At )] . (1)
+        new estimate = old estimate + const x (error)
+        tends toward optimal action value Q*
+
+        Here, α is a positive learning rate less than 1. The
+        symbol ← means “replaced by”. This is the learning
+        update as you have seen in lectures, left-hand side replaced
+        by right-hand side. The new state is observed; an algorithm
+        as discussed previously is applied to choose the action,
+        the reward is observed, and the learning equation Eq (1)
+        is applied.
+
+        i) Given a new state S, what properties need the algorithm
+        for choosing the appropriate action A have?
+        (4 marks)
+            It should exploit by taking what is believed to be the best action, but also explore
+            new actions by sometimes taking what may seem top be suboptimal actions or random play. However
+            it should balance this well with exploitation by choosing actions it already is aware of the stats for.
+            Examples for this are:
+                The epsilon greedy algorithm, which has linear total regret (never explores). It explores with p = epsilon, 
+                and exploits with probability 1 - epsilon
+            
+                The UCB is better since it has logarithmic total regret. It chooses actions that balance high reward and high uncertainty
+
+        ii) What does the learning equation Eq (1) converge to
+        when the algorithm is run to infinity?
+        (2 marks)
+            The update function replaces the current estimate with the old one, updated by a constant scaled
+            difference betweent the real reward and expected/estimated reward.
+            Therefore when this is ran to infinity the Q(s,a) will tend toward the optimal reward
+            which is R(s,a) for every pair
+
+            important to mention that this is for every pair
+
+
+        iii) Show that the dynamics in Eq (1)is attracting, that
+        is if you start close to the convergence point, the
+        next time that table entry is updated, learning takes
+        you closer to the fixed point. (Hint: Assume you
+        start close to the convergent point you discussed in
+        the previous question, say by a distance δ. Show
+        that after one learning step the value is closer still.
+        (4 marks)
+            
+            To solve this you need to make assumptions
+
+            1. assume that the estimate starts at a constant value away from the real reward:
+                Q(s,a) = R(s,a) + y
+
+            new Q = old Q + const(R(s,a) - old Q)
+            sub in the assumption
+
+            new Q = R(s,a) + y + const(R(s,a) - R(s,a) - y)
+
+            becomes:
+            R(s,a) + y - consty
+
+            becomes:
+            R(s,a) + (1-const)y
+
+            Since the constant is between 0 and 1, the value of y is becoming smaller 
+            therefore it is getting closer to the fixed point real reward with each iteration
+            ( each iteration is gets 1 lot of const closer to the real value)
+
+
+

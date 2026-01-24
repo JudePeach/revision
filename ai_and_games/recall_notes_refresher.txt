@@ -2,132 +2,241 @@
 
 ---- What Is A Game? -----
 What are the three things that a game tree requires?
+    A finite set of players (agents)
+    A set of payoffs that can be numerically described
+    A clearly defined set of rules
 
 What do each of the following represent: leaves, root, nodes and edges?
+    The leaves represent terminal game states, the root represents the initial game state, the nodes represent
+    the intermediate game states, edges represent actions/moves that players take.
 
 What do game trees fail to represent/capture?
+    It fails to represent moves that involve chance.
+    It also fails to show imperfect information
+    And also simultaneous moves where players make choices at the same time - e.g. rock paper scissors
 
 What is meant by imperfect information?
+    Imperfect information is when information sets have sizes larger than one, meaning that players dont know 
+    which node they are in on the game tree given their current game state.
 
 How do we handle chance, imperfect info, and simultaneous moves in game trees?
+    Chance - We add a new node called nature where it is nobodies turn and the branches from that node are
+    labelled with probabilities of each action
+    Imperfect info - We group game states that are indistinguishable
+    Handling simultaneous moves - use imperfect information
 
 What is a zero sum game?
+    When the sum of all the payoffs for both players add up to 0, meaning that both players have equal chance of winning.
 
 ----- Strategy -----
 What is a fully specified strategy?
+    When the same action is taken for each node in the same information set
 
 What is a pure strategy?
+    A subtree of a game tree where the root belongs to the strategy, whenever it is player i's turn,
+    exactly one of the available moves belongs to the subtree, for all nodes in the same info set for player i the 
+    same action is chosen
+    Whenever it is not player i's turn,  all available moves belong to the information set
 
 What is the method for finding all strategies when: player is making the first move, and when the player is not making the first move?
+    When the player is making the first move it is just the number of choices per state summed up.
+        Ni(t) = Ni(t1) + Ni(t2) ...
+    But when not moving first, theother player could choose any of the available moves before the player gets their choice.
+        Therefore the number becomes the product of the available choices rather than the sum.
+        Ni(t) = Ni(t1) x Ni(t2) ...
 
-#TODO: What is the overspecification issue?
-
-#TODO: What is the solution for the overspecification issue?
+What is the overspecification issue?
+    It means that some choices will never actually be reached in real play
+    
+What is the solution for the overspecification issue?
+    To solve it we only specify strategies for reachable positions
 
 ----- Normal Form Of A Game ------
 How do we represent games which dont involve chance in normal form?
+    We enumerate all strategies for each player, and determine the outcome of the game for each combination of
+    strategies and then fill out the payoff table accordingly.
 
 How do we represent games which involve chance in normal form?
+    We do the same, but we use the expected payoff for each reachable final node
 
 ------ Extensive vs Normal Form ------
 What are the advantages and disadvantages of extensive form?
+    It mimics real play well, models learn better, dynamic generation is possible, more compact for large games
+    But it has complex structure, and reasoning is cumbersome
 
 What are the advantages and disadvantages of normal form:
+    Stratifies decisions, easy payoff computation, well studied theory, simple structure
+    But can be enormous, may not be computable for all games, and is un natural for modelling
 
 When do we use normal form, and when would we instead use extensive form (game tree)?
+    We would use normal form when the game is small enough for enumeration, you need to analyse equilibria,
+    mathematical analysis is the goal, strategies can be precomputed.
+    We would use extensive form when the game is too large, modelling actual play or learning, game is repeated many times,
+    dynamic or online decision making
 
 What is the difference between infinite plays and infinite choices?
+    Infinite plays is when one play continues forever, infinite choices is when one selection point has 
+    unlimited amounts of choices.
 
 What is Zermelo's theorem?
+    In a 2 person zero sum game without chance, with perfect info and finite moves, exactly one of the following holds:
+        1. Player 1 has a winning stratagy
+        2. Player 2 has a winning Strategy
+        3. Both players have strategies ensuring a draw
 
 ----- Best Responses (Equilibria) In Zero Sum Games --------
 What is a best response?
+    A best response is a strategy which has a greater than or equal payoff for all other strategies for each of the other 
+    players strategy set ups
+    (highest possible payoff given other players strategies)
 
 What is meant when a  player has winning strategy?
+    When a player has a winning strategy then it is a best response to all other player's strategies
 
 What is a nash equilibrium?
+    When all players have a simultaneous best response stratagies to eachother, such that changing one players move in any way
+    cannot result in a better situation
 
 What is a sub game equilibrium point?
+    Given by a tuple of fully specified strategies, one for each player, such that this tuple gives an equilibrium point
+    for each sub game, even for sub games that wouldnt be reached when player these strategies.
 
-#TODO: For every 2 player zero sum game of complete info without chance and with payoffs (-1, 0, 1), exactly one of the following holds:
+For every 2 player zero sum game of complete info without chance and with payoffs (-1, 0, 1), exactly one of the following holds:
+    Either player 1 has a winning strategy, player 2 has a winning strategy, or both players have strategies ensuring a draw
 
-#TODO: What is the problem/assumption with best responses?
+What is the problem/assumption with best responses?
+    They assume that all players play optimally. And they assume that we know what all other players will do.
 
 ------- Equilibria In Non Zero Sum Games --------
 What are the alternative approaches to equilibria here?
+    System level analysis - look at the stable states for populations of agents
+    Regret minimization - focus on difference between actual and optimal payoffs
+    Negotiation - allowing agents to communicate and coordinate
 
 ----- Equilibria In 2 Person Zero Sum Games (Normal Form) -------
 What makes a strategy an equilibrium in normal form?
+    If it is maximal in its column and minimal in its row
 
 Shortly explain the minimax theorem:
+    A minimising player will take the choice giving the minimal payoff, out of the selections made available due to the
+    other player choosing the move giving their maximal payoff. This works the same the other way round too.
+    If both of these values are the same actions for each player, then this is an equilibrium point
 
 What is a saddle point?
+    A point which is maximum along one direction and minimum along the other
 
 What is the value of a game?
+    The best possible payoff that can be gaurunteed
 
 What is an optimal strategy?
+    A strategy that appears in some equilibrium 
 
-#TODO: Every 2 person zero sum game of perfect information with finite players has:
+Every 2 person zero sum game of perfect information with finite players has:
+    At least one equilibrium point
 
 ----- Mixed Strategies -----
 What is a mixed strategy?
+    When at each action point, the choice of move is given by a probability distribution
 
-How do we evaluate mixed strategies?
+How do we evaluate mixed strategies? 
+    We evaluate mixed strategies using the expected payoff - weighted average of the payoffs using the probability for
+    each move
 
 ------ Equilibria With Mixed Strategies ------
-#TODO: Does the definition of nash equilibrium stay the same or change for mixed strategies?
+Does the definition of nash equilibrium stay the same or change for mixed strategies?
+    It stays the same for both mixed and pure strategies
 
-KEY THEOREM: Every game with finitely many pure strategies for each player has at least one:
+Every game with finitely many pure strategies for each player has at least one:
+    One mixed stratagye equilibrium point
 
 What does it mean for a strategy to be dominated, and what does it imply if so?
+    A stratagey is dominated if its payoff is less than or equal to the payoff of every other strategy, for all oponent responding strategies.
+    You can remove dominated strategis from normal form representations, but order removal matters. This is because
+    a rational player would never play a dominated strategy
 
 ------ Minimax Algorithm -----
 What are the two ways to calculate the value?
+    Bottom up - start at leaf nodes and apply min max at each node - must traverse tree multiple times here however
+    Depth first - start at root and recursively explore sub trees 
 
-#TODO: For non zero sum games the value:
+For non zero sum games the value:
+    Does not neccessarily correspond to equilibrium payoffs
 
-#TODO: Does the minimax algorithm directly apply to games of imperfect information?
+Does the minimax algorithm directly apply to games of imperfect information?
+    No it does not apply to games of imperfect information
 
 ----- Alpha Beta Pruning ----
 What do the values of alpha and beta start as at the root?
+    Alpha starts as -inf, beta starts as +inf
 
 What does alpha represent and when is this bound updated?
+    Alpha represents the best possible payoff the maximising player can gauruntee so far, we update at max nodes
+    (lower bound)
 
 What does beta represent and when is this bound updated?
+    Beta represents the best payoff the minimizing player can gauruntee so far, we update at min nodes.
+    (upper bound)
 
 We prune when alpha is greater than or equal to beta
 
 ----- Evaluation Functions ------
 When are evaluation functions used?
+    Evaluation functions are used when we cant play a game to completion to find the payoff (game trees are too large)
 
 What does an evaluation function do?
+    It assigns a numerical score to a position without searching further, estimating how good the position is
 
 What is the standard approach for calculating an evalution function?
+    Using the weighted average
 
 ------ Learning In Games -----
 When is learnig preferred over methods like minimax?
+    When the branching factor is large, and online decision making is required, equilibria is hard to compute,
+    good heuristics cannot be found
 
 Why is learning hard?
+    Since it needs knowledge during play, feedback from outcomes tell you when you went wrong, but not what you did wrong
+    A sequence of moves is requires before the outcome is revealed
 
-#TODO: What is exploration and exploitation?
+What is exploration and exploitation?
+    Exploration is when you choose a suboptimal action too investigate different stratagy outcomes
+    Exploitation is when you choose a move you already know about, making the best decision given current information
 
 What is a multi armed bandit?
+    A formulation for one step decision making
 
-#TODO: What is the action value?
+What is the action value?
+    The mean reward for action a
 
 What is Regret?
+    Opportunity loss for one step
 
-#TODO: What is the count? What is the gap? What does a good algorithm have?
+What is the count? What is the gap? What does a good algorithm have?
+    The count is the expected number of times an action is selected
+    The gap is the difference in value between action a and optimal action a*
 
 What is the upper confidence bound?
+    An esitmate on the upper confidence for each value
 
 SEE WRITTEN LECTURE NOTES FOR FORMALISATIONS
 
 ------ Monte Carlo Tree Search (MCTS) ------
 What are the four phases of MCTS and briefly describe each one:
+    Selection - chooses the next action to explore
+    Expansion - adds this action to the partial tree
+    Simulation - plays the game to completion using a default policy
+    Backpropagation - Updates node and ancestor statistics based on the outcome of the game
 
 What is a tree policy and what is the standard one in MCTS?
+    Tree policy is the method used to select the action while in the current search tree, it must
+    balance exploration and exploitation. The normal one used is the UCT 1 algorithm (UCB applied to trees)
 
 What are the two approaches ot backpropagation?
+    Tabular approach - maintains a table Q(s,a) updating it incrementally holding the current estimate of the reward for taking action a from state s
+    Function approximation - too many state action pairs to visit them all, uses supervised regression model which can employ gradient descent
 
 What are the four possible ways of choosing the next best child to explore?
+    Max child - highest average reward
+    Robust child - child most often visited
+    Max robust child - maximal in both rewards and visits
+    Secure child - child that maximises a lower confidence interval
